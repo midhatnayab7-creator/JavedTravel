@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVED TRAVEL - Pakistan Domestic Airline Tickets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>Welcome to JAVED TRAVEL - Your Trusted Travel Partner in Pakistan</span>
+            <div>
+                <a href="tel:03181132286" class="phone-icon">0318-1132286</a> &nbsp;|&nbsp;
+                <a href="https://wa.me/9203181132286">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee-bar">
+        <div class="marquee-content">
+            &#9992; JAVED TRAVEL - Book Domestic Flights: PIA | Airblue | SereneAir | AirSial | Fly Jinnah &bull;
+            Karachi - Lahore - Islamabad - Peshawar - Quetta - Multan - Faisalabad - Sialkot - Gilgit - Skardu &bull;
+            Best Prices Guaranteed! Call Now: 0318-1132286 &bull;
+            Visa Services Available for All Countries &bull;
+            Daily Updated Flight Schedules &#9992;
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">JT</div>
+                    <div class="logo-text">
+                        <h1>JAVED TRAVEL</h1>
+                        <span>Domestic &amp; International Flights</span>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="flights.html">Flights</a>
+                    <a href="timetable.html">Timetable</a>
+                    <a href="airlines.html">Airlines</a>
+                    <a href="booking.html">Book Now</a>
+                    <a href="visa.html">Visa Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Book Your <span>Domestic Flights</span><br>Across Pakistan</h2>
+            <p>Find the best deals on PIA, Airblue, SereneAir, AirSial &amp; Fly Jinnah. Instant booking, best prices, and 24/7 customer support.</p>
+            <div style="display:flex;gap:15px;flex-wrap:wrap;">
+                <a href="flights.html" class="btn btn-accent btn-lg">Search Flights &#9992;</a>
+                <a href="booking.html" class="btn btn-outline btn-lg" style="border-color:#fff;color:#fff;">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Box -->
+    <div class="container">
+        <div class="search-box">
+            <h3>&#9992; Search Domestic Flights</h3>
+            <div class="search-tabs">
+                <button class="search-tab active">One Way</button>
+                <button class="search-tab">Round Trip</button>
+            </div>
+            <form class="search-form" id="searchForm">
+                <div class="form-group">
+                    <label>From</label>
+                    <select class="city-select" required>
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <select class="city-select" required>
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Departure</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Passengers</label>
+                    <select>
+                        <option>1 Adult</option>
+                        <option>2 Adults</option>
+                        <option>3 Adults</option>
+                        <option>4 Adults</option>
+                        <option>5 Adults</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Airlines Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Partner Airlines</h2>
+                <p>We offer tickets for all major domestic airlines operating in Pakistan</p>
+                <div class="line"></div>
+            </div>
+            <div class="airlines-grid">
+                <div class="airline-card">
+                    <div class="airline-logo" style="background:linear-gradient(135deg,#006747,#00a86b);">PIA</div>
+                    <h3>Pakistan International Airlines</h3>
+                    <p>National flag carrier of Pakistan</p>
+                    <span class="routes-count">25+ Routes</span>
+                </div>
+                <div class="airline-card">
+                    <div class="airline-logo" style="background:linear-gradient(135deg,#004B87,#0077cc);">AB</div>
+                    <h3>Airblue</h3>
+                    <p>Pakistan's leading private airline</p>
+                    <span class="routes-count">15+ Routes</span>
+                </div>
+                <div class="airline-card">
+                    <div class="airline-logo" style="background:linear-gradient(135deg,#00A651,#00cc66);">SA</div>
+                    <h3>Serene Air</h3>
+                    <p>Premium domestic airline service</p>
+                    <span class="routes-count">12+ Routes</span>
+                </div>
+                <div class="airline-card">
+                    <div class="airline-logo" style="background:linear-gradient(135deg,#C8102E,#e63946);">AS</div>
+                    <h3>Air Sial</h3>
+                    <p>Sialkot's own airline</p>
+                    <span class="routes-count">10+ Routes</span>
+                </div>
+                <div class="airline-card">
+                    <div class="airline-logo" style="background:linear-gradient(135deg,#FF6B00,#ff8c38);">FJ</div>
+                    <h3>Fly Jinnah</h3>
+                    <p>Low-cost carrier of Pakistan</p>
+                    <span class="routes-count">10+ Routes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Routes -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Domestic Routes</h2>
+                <p>Most booked flight routes across Pakistan with best prices</p>
+                <div class="line"></div>
+            </div>
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>Karachi to Lahore</h4>
+                        <div class="route-path">KHI <span class="arrow">&#9992; &#10132;</span> LHE</div>
+                        <div class="airlines-available">PIA, Airblue, SereneAir, AirSial, Fly Jinnah</div>
+                    </div>
+                    <div class="route-price">
+                        <div class="price">PKR 12,500</div>
+                        <div class="price-label">Starting from</div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>Karachi to Islamabad</h4>
+                        <div class="route-path">KHI <span class="arrow">&#9992; &#10132;</span> ISB</div>
+                        <div class="airlines-available">PIA, Airblue, SereneAir, AirSial, Fly Jinnah</div>
+                    </div>
+                    <div class="route-price">
+                        <div class="price">PKR 13,200</div>
+                        <div class="price-label">Starting from</div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>Lahore to Islamabad</h4>
+                        <div class="route-path">LHE <span class="arrow">&#9992; &#10132;</span> ISB</div>
+                        <div class="airlines-available">PIA, Airblue, SereneAir, AirSial</div>
+                    </div>
+                    <div class="route-price">
+                        <div class="price">PKR 8,500</div>
+                        <div class="price-label">Starting from</div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>Islamabad to Karachi</h4>
+                        <div class="route-path">ISB <span class="arrow">&#9992; &#10132;</span> KHI</div>
+                        <div class="airlines-available">PIA, Airblue, SereneAir, Fly Jinnah</div>
+                    </div>
+                    <div class="route-price">
+                        <div class="price">PKR 13,500</div>
+                        <div class="price-label">Starting from</div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>Karachi to Peshawar</h4>
+                        <div class="route-path">KHI <span class="arrow">&#9992; &#10132;</span> PEW</div>
+                        <div class="airlines-available">PIA, Airblue, SereneAir</div>
+                    </div>
+                    <div class="route-price">
+                        <div class="price">PKR 14,800</div>
+                        <div class="price-label">Starting from</div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>Islamabad to Gilgit</h4>
+                        <div class="route-path">ISB <span class="arrow">&#9992; &#10132;</span> GIL</div>
+                        <div class="airlines-available">PIA</div>
+                    </div>
+                    <div class="route-price">
+                        <div class="price">PKR 9,200</div>
+                        <div class="price-label">Starting from</div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>Karachi to Quetta</h4>
+                        <div class="route-path">KHI <span class="arrow">&#9992; &#10132;</span> UET</div>
+                        <div class="airlines-available">PIA, Airblue</div>
+                    </div>
+                    <div class="route-price">
+                        <div class="price">PKR 11,000</div>
+                        <div class="price-label">Starting from</div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-info">
+                        <h4>Islamabad to Skardu</h4>
+                        <div class="route-path">ISB <span class="arrow">&#9992; &#10132;</span> KDU</div>
+                        <div class="airlines-available">PIA</div>
+                    </div>
+                    <div class="route-price">
+                        <div class="price">PKR 9,800</div>
+                        <div class="price-label">Starting from</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose JAVED TRAVEL?</h2>
+                <p>We provide the best travel experience with unmatched services</p>
+                <div class="line"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">&#9992;</div>
+                    <h3>All Airlines Available</h3>
+                    <p>Book tickets for PIA, Airblue, SereneAir, AirSial, and Fly Jinnah all in one place.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128176;</div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>We offer the most competitive prices for domestic flights across Pakistan.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128197;</div>
+                    <h3>Daily Updated Schedule</h3>
+                    <p>Flight timetables updated daily based on airline schedules and availability.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128222;</div>
+                    <h3>24/7 Customer Support</h3>
+                    <p>Call us anytime at 0318-1132286 for booking assistance and flight queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Partner Airlines</p>
+                </div>
+                <div class="stat-item">
+                    <h3>18+</h3>
+                    <p>Domestic Cities</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Daily Flights</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10K+</h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Trusted by thousands of travelers across Pakistan</p>
+                <div class="line"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>Excellent service! Booked my Karachi to Islamabad flight through JAVED TRAVEL and got the best price. Highly recommended!</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AK</div>
+                        <div>
+                            <h4>Ahmed Khan</h4>
+                            <span>Karachi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>Very professional and quick booking process. The daily timetable updates are very helpful for planning my business trips.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">FR</div>
+                        <div>
+                            <h4>Fatima Rizwan</h4>
+                            <span>Lahore</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>Best travel agency in Pakistan! Their visa services are also excellent. Got my UAE visa through them without any hassle.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MH</div>
+                        <div>
+                            <h4>Muhammad Hassan</h4>
+                            <span>Islamabad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>JAVED TRAVEL</h3>
+                    <p>Your trusted travel partner for domestic airline tickets across Pakistan. We offer the best prices for PIA, Airblue, SereneAir, AirSial, and Fly Jinnah flights.</p>
+                    <p style="margin-top:15px;"><strong>Call:</strong> <a href="tel:03181132286" style="color:#f59e0b;">0318-1132286</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="flights.html">Search Flights</a></li>
+                        <li><a href="timetable.html">Flight Timetable</a></li>
+                        <li><a href="airlines.html">Airlines</a></li>
+                        <li><a href="booking.html">Book Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Domestic Routes</h3>
+                    <ul>
+                        <li><a href="flights.html">Karachi - Lahore</a></li>
+                        <li><a href="flights.html">Karachi - Islamabad</a></li>
+                        <li><a href="flights.html">Lahore - Islamabad</a></li>
+                        <li><a href="flights.html">Islamabad - Peshawar</a></li>
+                        <li><a href="flights.html">Islamabad - Gilgit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="visa.html">Visa Services</a></li>
+                        <li><a href="booking.html">Flight Booking</a></li>
+                        <li><a href="timetable.html">Flight Status</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JAVED TRAVEL. All Rights Reserved. | Contact: <a href="tel:03181132286" class="whatsapp-float">0318-1132286</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/9203181132286" class="whatsapp-btn" title="Chat on WhatsApp">
+        &#128172;
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

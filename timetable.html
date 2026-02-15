@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Timetable - JAVED TRAVEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>JAVED TRAVEL - Daily Updated Flight Schedules</span>
+            <div>
+                <a href="tel:03181132286" class="phone-icon">0318-1132286</a> &nbsp;|&nbsp;
+                <a href="https://wa.me/9203181132286">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">JT</div>
+                    <div class="logo-text">
+                        <h1>JAVED TRAVEL</h1>
+                        <span>Domestic &amp; International Flights</span>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="flights.html">Flights</a>
+                    <a href="timetable.html" class="active">Timetable</a>
+                    <a href="airlines.html">Airlines</a>
+                    <a href="booking.html">Book Now</a>
+                    <a href="visa.html">Visa Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h2>Flight Timetable</h2>
+            <p>Complete daily schedule of all domestic airlines in Pakistan</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Timetable</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timetable Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Date and Info -->
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;margin-bottom:25px;">
+                <div>
+                    <div class="date-badge">Schedule for: <span class="current-date"></span></div>
+                    <p style="color:#64748b;font-size:0.9rem;">Timetable is updated daily based on airline schedules, visa requirements, and booking availability.</p>
+                </div>
+                <div>
+                    <span style="background:rgba(16,185,129,0.1);color:#10b981;padding:8px 16px;border-radius:20px;font-weight:600;font-size:0.9rem;">
+                        Total Flights: <span id="flightCount">0</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="filter-bar">
+                <select id="filterAirline" onchange="filterTimetable()">
+                    <option value="all">All Airlines</option>
+                    <option value="PIA">PIA</option>
+                    <option value="Airblue">Airblue</option>
+                    <option value="SereneAir">SereneAir</option>
+                    <option value="AirSial">AirSial</option>
+                    <option value="Fly Jinnah">Fly Jinnah</option>
+                </select>
+                <select id="filterFrom" class="city-select" onchange="filterTimetable()">
+                    <option value="all">From: All Cities</option>
+                </select>
+                <select id="filterTo" class="city-select" onchange="filterTimetable()">
+                    <option value="all">To: All Cities</option>
+                </select>
+                <button class="btn btn-primary" onclick="filterTimetable()" style="padding:10px 20px;">Apply Filter</button>
+                <button class="btn btn-outline" onclick="document.getElementById('filterAirline').value='all';document.getElementById('filterFrom').value='all';document.getElementById('filterTo').value='all';filterTimetable();" style="padding:10px 20px;">Reset</button>
+            </div>
+
+            <!-- Legend -->
+            <div style="display:flex;gap:15px;margin-bottom:20px;flex-wrap:wrap;">
+                <span class="airline-tag tag-pia">PIA</span>
+                <span class="airline-tag tag-airblue">Airblue</span>
+                <span class="airline-tag tag-serene">SereneAir</span>
+                <span class="airline-tag tag-airsial">AirSial</span>
+                <span class="airline-tag tag-flyjinnah">Fly Jinnah</span>
+                &nbsp;&nbsp;
+                <span class="status-badge status-ontime">On Time</span>
+                <span class="status-badge status-delayed">Delayed</span>
+                <span class="status-badge status-boarding">Boarding</span>
+            </div>
+
+            <!-- Timetable -->
+            <div class="timetable-container">
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>Airline</th>
+                            <th>Flight No</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Departure</th>
+                            <th>Arrival</th>
+                            <th>Duration</th>
+                            <th>Aircraft</th>
+                            <th>Fare</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="timetableBody">
+                        <!-- Generated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Notice -->
+            <div style="margin-top:30px;padding:25px;background:linear-gradient(135deg,rgba(245,158,11,0.1),rgba(26,115,232,0.1));border-radius:12px;border-left:4px solid #f59e0b;">
+                <h4 style="margin-bottom:8px;color:#0a1628;">Important Notice</h4>
+                <p style="font-size:0.9rem;color:#64748b;">
+                    Flight schedules are subject to change based on weather conditions, airline operations, and regulatory requirements.
+                    Prices shown are approximate and may vary at the time of booking. For confirmed schedules and prices,
+                    please contact us at <a href="tel:03181132286" style="color:#1a73e8;font-weight:600;">0318-1132286</a>.
+                </p>
+            </div>
+
+            <!-- PIA Timetable Section -->
+            <div style="margin-top:50px;">
+                <h3 style="font-size:1.5rem;margin-bottom:20px;color:#0a1628;">&#9992; PIA - Pakistan International Airlines Schedule</h3>
+                <div class="timetable-container">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <th>Route</th>
+                                <th>Flight No</th>
+                                <th>Days</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Aircraft</th>
+                                <th>Fare From</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Karachi → Lahore</td><td>PK-301</td><td>Daily</td><td>6:00 AM</td><td>7:50 AM</td><td>A320</td><td>PKR 12,500</td></tr>
+                            <tr><td>Karachi → Lahore</td><td>PK-303</td><td>Daily</td><td>10:30 AM</td><td>12:20 PM</td><td>B737</td><td>PKR 13,200</td></tr>
+                            <tr><td>Karachi → Lahore</td><td>PK-305</td><td>Daily</td><td>3:00 PM</td><td>4:50 PM</td><td>A320</td><td>PKR 14,000</td></tr>
+                            <tr><td>Karachi → Lahore</td><td>PK-309</td><td>Daily</td><td>7:30 PM</td><td>9:20 PM</td><td>A320</td><td>PKR 13,500</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>PK-307</td><td>Daily</td><td>7:00 AM</td><td>9:05 AM</td><td>A320</td><td>PKR 13,200</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>PK-311</td><td>Daily</td><td>12:00 PM</td><td>2:05 PM</td><td>B737</td><td>PKR 14,500</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>PK-315</td><td>Daily</td><td>5:30 PM</td><td>7:35 PM</td><td>A320</td><td>PKR 15,000</td></tr>
+                            <tr><td>Karachi → Peshawar</td><td>PK-351</td><td>Daily</td><td>8:00 AM</td><td>10:15 AM</td><td>A320</td><td>PKR 14,800</td></tr>
+                            <tr><td>Karachi → Quetta</td><td>PK-321</td><td>Daily</td><td>9:00 AM</td><td>10:20 AM</td><td>ATR 72</td><td>PKR 11,000</td></tr>
+                            <tr><td>Islamabad → Gilgit</td><td>PK-601</td><td>Mon/Wed/Fri</td><td>7:00 AM</td><td>8:05 AM</td><td>ATR 72</td><td>PKR 9,200</td></tr>
+                            <tr><td>Islamabad → Skardu</td><td>PK-451</td><td>Tue/Thu/Sat</td><td>7:30 AM</td><td>8:40 AM</td><td>ATR 72</td><td>PKR 9,800</td></tr>
+                            <tr><td>Islamabad → Chitral</td><td>PK-607</td><td>Mon/Fri</td><td>8:00 AM</td><td>8:55 AM</td><td>ATR 72</td><td>PKR 8,500</td></tr>
+                            <tr><td>Lahore → Islamabad</td><td>PK-370</td><td>Daily</td><td>6:30 AM</td><td>7:25 AM</td><td>A320</td><td>PKR 8,500</td></tr>
+                            <tr><td>Lahore → Karachi</td><td>PK-302</td><td>Daily</td><td>8:30 AM</td><td>10:20 AM</td><td>A320</td><td>PKR 12,500</td></tr>
+                            <tr><td>Islamabad → Karachi</td><td>PK-308</td><td>Daily</td><td>10:00 AM</td><td>12:05 PM</td><td>A320</td><td>PKR 13,200</td></tr>
+                            <tr><td>Karachi → Sukkur</td><td>PK-535</td><td>Mon/Wed/Fri</td><td>11:00 AM</td><td>12:00 PM</td><td>ATR 72</td><td>PKR 8,000</td></tr>
+                            <tr><td>Karachi → Turbat</td><td>PK-501</td><td>Tue/Sat</td><td>9:30 AM</td><td>10:40 AM</td><td>ATR 72</td><td>PKR 9,500</td></tr>
+                            <tr><td>Karachi → Gwadar</td><td>PK-505</td><td>Wed/Sun</td><td>10:00 AM</td><td>11:15 AM</td><td>ATR 72</td><td>PKR 10,000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Airblue Timetable -->
+            <div style="margin-top:40px;">
+                <h3 style="font-size:1.5rem;margin-bottom:20px;color:#0a1628;">&#9992; Airblue Schedule</h3>
+                <div class="timetable-container">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <th>Route</th>
+                                <th>Flight No</th>
+                                <th>Days</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Aircraft</th>
+                                <th>Fare From</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Karachi → Lahore</td><td>PA-201</td><td>Daily</td><td>7:00 AM</td><td>8:50 AM</td><td>A321</td><td>PKR 11,800</td></tr>
+                            <tr><td>Karachi → Lahore</td><td>PA-205</td><td>Daily</td><td>1:30 PM</td><td>3:20 PM</td><td>A320</td><td>PKR 12,500</td></tr>
+                            <tr><td>Karachi → Lahore</td><td>PA-209</td><td>Daily</td><td>6:00 PM</td><td>7:50 PM</td><td>A321</td><td>PKR 13,000</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>PA-211</td><td>Daily</td><td>6:30 AM</td><td>8:35 AM</td><td>A320</td><td>PKR 12,800</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>PA-215</td><td>Daily</td><td>2:00 PM</td><td>4:05 PM</td><td>A321</td><td>PKR 14,000</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>PA-219</td><td>Daily</td><td>8:00 PM</td><td>10:05 PM</td><td>A320</td><td>PKR 13,500</td></tr>
+                            <tr><td>Lahore → Islamabad</td><td>PA-400</td><td>Daily</td><td>7:30 AM</td><td>8:25 AM</td><td>A320</td><td>PKR 8,200</td></tr>
+                            <tr><td>Lahore → Islamabad</td><td>PA-404</td><td>Daily</td><td>4:00 PM</td><td>4:55 PM</td><td>A321</td><td>PKR 8,800</td></tr>
+                            <tr><td>Lahore → Karachi</td><td>PA-202</td><td>Daily</td><td>9:30 AM</td><td>11:20 AM</td><td>A321</td><td>PKR 11,800</td></tr>
+                            <tr><td>Islamabad → Karachi</td><td>PA-212</td><td>Daily</td><td>9:15 AM</td><td>11:20 AM</td><td>A320</td><td>PKR 12,800</td></tr>
+                            <tr><td>Islamabad → Lahore</td><td>PA-401</td><td>Daily</td><td>9:00 AM</td><td>9:55 AM</td><td>A320</td><td>PKR 8,200</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SereneAir Timetable -->
+            <div style="margin-top:40px;">
+                <h3 style="font-size:1.5rem;margin-bottom:20px;color:#0a1628;">&#9992; Serene Air Schedule</h3>
+                <div class="timetable-container">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <th>Route</th>
+                                <th>Flight No</th>
+                                <th>Days</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Aircraft</th>
+                                <th>Fare From</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Karachi → Islamabad</td><td>ER-501</td><td>Daily</td><td>6:45 AM</td><td>8:50 AM</td><td>B737</td><td>PKR 12,500</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>ER-505</td><td>Daily</td><td>2:30 PM</td><td>4:35 PM</td><td>B737</td><td>PKR 13,800</td></tr>
+                            <tr><td>Karachi → Lahore</td><td>ER-521</td><td>Daily</td><td>8:00 AM</td><td>9:50 AM</td><td>B737</td><td>PKR 12,000</td></tr>
+                            <tr><td>Karachi → Lahore</td><td>ER-525</td><td>Daily</td><td>4:30 PM</td><td>6:20 PM</td><td>B737</td><td>PKR 12,800</td></tr>
+                            <tr><td>Karachi → Peshawar</td><td>ER-541</td><td>Mon/Wed/Fri/Sun</td><td>9:00 AM</td><td>11:15 AM</td><td>B737</td><td>PKR 14,200</td></tr>
+                            <tr><td>Karachi → Quetta</td><td>ER-551</td><td>Daily</td><td>10:30 AM</td><td>11:50 AM</td><td>B737</td><td>PKR 10,500</td></tr>
+                            <tr><td>Karachi → Faisalabad</td><td>ER-561</td><td>Tue/Thu/Sat</td><td>11:00 AM</td><td>12:45 PM</td><td>B737</td><td>PKR 11,500</td></tr>
+                            <tr><td>Islamabad → Karachi</td><td>ER-502</td><td>Daily</td><td>9:30 AM</td><td>11:35 AM</td><td>B737</td><td>PKR 12,500</td></tr>
+                            <tr><td>Lahore → Karachi</td><td>ER-522</td><td>Daily</td><td>10:30 AM</td><td>12:20 PM</td><td>B737</td><td>PKR 12,000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- AirSial Timetable -->
+            <div style="margin-top:40px;">
+                <h3 style="font-size:1.5rem;margin-bottom:20px;color:#0a1628;">&#9992; Air Sial Schedule</h3>
+                <div class="timetable-container">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <th>Route</th>
+                                <th>Flight No</th>
+                                <th>Days</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Aircraft</th>
+                                <th>Fare From</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Karachi → Lahore</td><td>PF-121</td><td>Daily</td><td>7:15 AM</td><td>9:05 AM</td><td>A320</td><td>PKR 11,500</td></tr>
+                            <tr><td>Karachi → Lahore</td><td>PF-125</td><td>Daily</td><td>3:45 PM</td><td>5:35 PM</td><td>A320</td><td>PKR 12,200</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>PF-131</td><td>Daily</td><td>8:30 AM</td><td>10:35 AM</td><td>A320</td><td>PKR 12,800</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>PF-135</td><td>Daily</td><td>5:00 PM</td><td>7:05 PM</td><td>A320</td><td>PKR 13,500</td></tr>
+                            <tr><td>Lahore → Karachi</td><td>PF-122</td><td>Daily</td><td>10:00 AM</td><td>11:50 AM</td><td>A320</td><td>PKR 11,500</td></tr>
+                            <tr><td>Islamabad → Karachi</td><td>PF-132</td><td>Daily</td><td>11:15 AM</td><td>1:20 PM</td><td>A320</td><td>PKR 12,800</td></tr>
+                            <tr><td>Karachi → Sialkot</td><td>PF-141</td><td>Mon/Wed/Fri</td><td>9:00 AM</td><td>11:00 AM</td><td>A320</td><td>PKR 13,500</td></tr>
+                            <tr><td>Sialkot → Karachi</td><td>PF-142</td><td>Mon/Wed/Fri</td><td>12:00 PM</td><td>2:00 PM</td><td>A320</td><td>PKR 13,500</td></tr>
+                            <tr><td>Lahore → Islamabad</td><td>PF-151</td><td>Daily</td><td>6:45 AM</td><td>7:40 AM</td><td>A320</td><td>PKR 7,800</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Fly Jinnah Timetable -->
+            <div style="margin-top:40px;">
+                <h3 style="font-size:1.5rem;margin-bottom:20px;color:#0a1628;">&#9992; Fly Jinnah Schedule</h3>
+                <div class="timetable-container">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <th>Route</th>
+                                <th>Flight No</th>
+                                <th>Days</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Aircraft</th>
+                                <th>Fare From</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Karachi → Lahore</td><td>9P-601</td><td>Daily</td><td>6:30 AM</td><td>8:20 AM</td><td>A320</td><td>PKR 10,500</td></tr>
+                            <tr><td>Karachi → Lahore</td><td>9P-605</td><td>Daily</td><td>2:00 PM</td><td>3:50 PM</td><td>A320</td><td>PKR 11,200</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>9P-611</td><td>Daily</td><td>7:00 AM</td><td>9:05 AM</td><td>A320</td><td>PKR 11,000</td></tr>
+                            <tr><td>Karachi → Islamabad</td><td>9P-615</td><td>Daily</td><td>4:00 PM</td><td>6:05 PM</td><td>A320</td><td>PKR 12,000</td></tr>
+                            <tr><td>Karachi → Peshawar</td><td>9P-621</td><td>Daily</td><td>8:30 AM</td><td>10:45 AM</td><td>A320</td><td>PKR 13,000</td></tr>
+                            <tr><td>Karachi → Quetta</td><td>9P-631</td><td>Mon/Wed/Fri/Sun</td><td>10:00 AM</td><td>11:20 AM</td><td>A320</td><td>PKR 9,800</td></tr>
+                            <tr><td>Lahore → Karachi</td><td>9P-602</td><td>Daily</td><td>9:00 AM</td><td>10:50 AM</td><td>A320</td><td>PKR 10,500</td></tr>
+                            <tr><td>Islamabad → Karachi</td><td>9P-612</td><td>Daily</td><td>10:00 AM</td><td>12:05 PM</td><td>A320</td><td>PKR 11,000</td></tr>
+                            <tr><td>Lahore → Islamabad</td><td>9P-641</td><td>Daily</td><td>7:00 AM</td><td>7:55 AM</td><td>A320</td><td>PKR 7,500</td></tr>
+                            <tr><td>Islamabad → Lahore</td><td>9P-642</td><td>Daily</td><td>8:30 AM</td><td>9:25 AM</td><td>A320</td><td>PKR 7,500</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>JAVED TRAVEL</h3>
+                    <p>Your trusted travel partner for domestic airline tickets across Pakistan.</p>
+                    <p style="margin-top:15px;"><strong>Call:</strong> <a href="tel:03181132286" style="color:#f59e0b;">0318-1132286</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="flights.html">Search Flights</a></li>
+                        <li><a href="timetable.html">Flight Timetable</a></li>
+                        <li><a href="airlines.html">Airlines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Domestic Routes</h3>
+                    <ul>
+                        <li><a href="flights.html">Karachi - Lahore</a></li>
+                        <li><a href="flights.html">Karachi - Islamabad</a></li>
+                        <li><a href="flights.html">Lahore - Islamabad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="visa.html">Visa Services</a></li>
+                        <li><a href="booking.html">Flight Booking</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JAVED TRAVEL. All Rights Reserved. | Contact: <a href="tel:03181132286" class="whatsapp-float">0318-1132286</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/9203181132286" class="whatsapp-btn" title="Chat on WhatsApp">&#128172;</a>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets - JAVED TRAVEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>JAVED TRAVEL - Book Your Domestic Flight Now</span>
+            <div>
+                <a href="tel:03181132286" class="phone-icon">0318-1132286</a> &nbsp;|&nbsp;
+                <a href="https://wa.me/9203181132286">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">JT</div>
+                    <div class="logo-text">
+                        <h1>JAVED TRAVEL</h1>
+                        <span>Domestic &amp; International Flights</span>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="flights.html">Flights</a>
+                    <a href="timetable.html">Timetable</a>
+                    <a href="airlines.html">Airlines</a>
+                    <a href="booking.html" class="active">Book Now</a>
+                    <a href="visa.html">Visa Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h2>Book Your Flight</h2>
+            <p>Easy and quick domestic flight booking across Pakistan</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Book Now</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:2fr 1fr;gap:40px;">
+
+                <!-- Booking Form -->
+                <div>
+                    <div class="booking-form" style="max-width:none;">
+                        <h3>&#9992; Flight Booking Form</h3>
+                        <p style="text-align:center;color:#64748b;margin-bottom:25px;">Fill in the details below and our team will confirm your booking</p>
+
+                        <form id="bookingForm">
+                            <!-- Trip Type -->
+                            <div style="display:flex;gap:15px;margin-bottom:25px;justify-content:center;">
+                                <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:10px 20px;border:2px solid #e2e8f0;border-radius:8px;">
+                                    <input type="radio" name="tripType" value="oneway" checked> One Way
+                                </label>
+                                <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:10px 20px;border:2px solid #e2e8f0;border-radius:8px;">
+                                    <input type="radio" name="tripType" value="roundtrip"> Round Trip
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group-full">
+                                    <label>Full Name (as per CNIC/Passport) *</label>
+                                    <input type="text" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="form-group-full">
+                                    <label>CNIC Number *</label>
+                                    <input type="text" placeholder="XXXXX-XXXXXXX-X" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group-full">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" placeholder="03XX-XXXXXXX" required>
+                                </div>
+                                <div class="form-group-full">
+                                    <label>Email Address</label>
+                                    <input type="email" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group-full">
+                                    <label>From (Departure City) *</label>
+                                    <select class="city-select" required>
+                                        <option value="">Select Departure City</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-full">
+                                    <label>To (Arrival City) *</label>
+                                    <select class="city-select" required>
+                                        <option value="">Select Arrival City</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group-full">
+                                    <label>Preferred Airline</label>
+                                    <select>
+                                        <option value="">Any Airline</option>
+                                        <option>PIA - Pakistan International Airlines</option>
+                                        <option>Airblue</option>
+                                        <option>Serene Air</option>
+                                        <option>Air Sial</option>
+                                        <option>Fly Jinnah</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-full">
+                                    <label>Class</label>
+                                    <select>
+                                        <option>Economy Class</option>
+                                        <option>Business Class</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group-full">
+                                    <label>Departure Date *</label>
+                                    <input type="date" required>
+                                </div>
+                                <div class="form-group-full">
+                                    <label>Return Date (for Round Trip)</label>
+                                    <input type="date">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group-full">
+                                    <label>Number of Passengers *</label>
+                                    <select required>
+                                        <option>1 Passenger</option>
+                                        <option>2 Passengers</option>
+                                        <option>3 Passengers</option>
+                                        <option>4 Passengers</option>
+                                        <option>5 Passengers</option>
+                                        <option>6+ Passengers</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-full">
+                                    <label>Preferred Time</label>
+                                    <select>
+                                        <option>Any Time</option>
+                                        <option>Morning (6 AM - 12 PM)</option>
+                                        <option>Afternoon (12 PM - 5 PM)</option>
+                                        <option>Evening (5 PM - 10 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row single">
+                                <div class="form-group-full">
+                                    <label>Special Requests / Notes</label>
+                                    <textarea placeholder="Any special requirements, meal preferences, wheelchair assistance, etc."></textarea>
+                                </div>
+                            </div>
+
+                            <div style="text-align:center;margin-top:20px;">
+                                <button type="submit" class="btn btn-accent btn-lg" style="width:100%;max-width:400px;">
+                                    Submit Booking Request &#9992;
+                                </button>
+                                <p style="font-size:0.85rem;color:#64748b;margin-top:15px;">
+                                    Our team will call you within 30 minutes to confirm your booking and payment details.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <!-- Contact Card -->
+                    <div style="background:linear-gradient(135deg,#0a1628,#1e3a5f);color:#fff;border-radius:12px;padding:30px;margin-bottom:25px;">
+                        <h3 style="margin-bottom:15px;">Need Help Booking?</h3>
+                        <p style="font-size:0.9rem;color:rgba(255,255,255,0.8);margin-bottom:20px;">Call us directly for instant booking assistance</p>
+                        <a href="tel:03181132286" style="display:block;background:#f59e0b;color:#0a1628;padding:15px;border-radius:8px;text-align:center;font-weight:700;font-size:1.1rem;margin-bottom:10px;">
+                            &#128222; 0318-1132286
+                        </a>
+                        <a href="https://wa.me/9203181132286" style="display:block;background:#25D366;color:#fff;padding:15px;border-radius:8px;text-align:center;font-weight:700;font-size:1rem;">
+                            &#128172; WhatsApp Us
+                        </a>
+                    </div>
+
+                    <!-- Booking Steps -->
+                    <div style="background:#fff;border-radius:12px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin-bottom:25px;">
+                        <h4 style="margin-bottom:20px;color:#0a1628;">How Booking Works</h4>
+                        <div style="display:flex;flex-direction:column;gap:20px;">
+                            <div style="display:flex;gap:15px;align-items:flex-start;">
+                                <div style="width:35px;height:35px;border-radius:50%;background:#1a73e8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">1</div>
+                                <div>
+                                    <h5 style="font-size:0.95rem;">Fill Booking Form</h5>
+                                    <p style="font-size:0.8rem;color:#64748b;">Enter your travel details and passenger information</p>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:15px;align-items:flex-start;">
+                                <div style="width:35px;height:35px;border-radius:50%;background:#f59e0b;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">2</div>
+                                <div>
+                                    <h5 style="font-size:0.95rem;">Confirmation Call</h5>
+                                    <p style="font-size:0.8rem;color:#64748b;">Our team will call you to confirm availability and fare</p>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:15px;align-items:flex-start;">
+                                <div style="width:35px;height:35px;border-radius:50%;background:#10b981;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">3</div>
+                                <div>
+                                    <h5 style="font-size:0.95rem;">Payment</h5>
+                                    <p style="font-size:0.8rem;color:#64748b;">Easy payment via bank transfer, JazzCash, or EasyPaisa</p>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:15px;align-items:flex-start;">
+                                <div style="width:35px;height:35px;border-radius:50%;background:#8b5cf6;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">4</div>
+                                <div>
+                                    <h5 style="font-size:0.95rem;">Receive E-Ticket</h5>
+                                    <p style="font-size:0.8rem;color:#64748b;">Get your confirmed e-ticket via WhatsApp or Email</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div style="background:#fff;border-radius:12px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);margin-bottom:25px;">
+                        <h4 style="margin-bottom:15px;color:#0a1628;">Accepted Payment Methods</h4>
+                        <ul style="color:#64748b;font-size:0.9rem;">
+                            <li style="padding:8px 0;border-bottom:1px solid #e2e8f0;">&#128179; Bank Transfer (All Banks)</li>
+                            <li style="padding:8px 0;border-bottom:1px solid #e2e8f0;">&#128241; JazzCash</li>
+                            <li style="padding:8px 0;border-bottom:1px solid #e2e8f0;">&#128241; EasyPaisa</li>
+                            <li style="padding:8px 0;border-bottom:1px solid #e2e8f0;">&#128179; Cash Payment (Office)</li>
+                            <li style="padding:8px 0;">&#128179; Cheque Payment</li>
+                        </ul>
+                    </div>
+
+                    <!-- Important Note -->
+                    <div style="background:rgba(245,158,11,0.1);border-radius:12px;padding:25px;border-left:4px solid #f59e0b;">
+                        <h4 style="margin-bottom:10px;color:#d97706;">Important</h4>
+                        <p style="font-size:0.85rem;color:#64748b;line-height:1.8;">
+                            Prices shown are approximate and subject to change based on availability. Final fare will be confirmed at the time of booking. Cancellation and refund policies vary by airline.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>JAVED TRAVEL</h3>
+                    <p>Your trusted travel partner for domestic airline tickets across Pakistan.</p>
+                    <p style="margin-top:15px;"><strong>Call:</strong> <a href="tel:03181132286" style="color:#f59e0b;">0318-1132286</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="flights.html">Search Flights</a></li>
+                        <li><a href="timetable.html">Flight Timetable</a></li>
+                        <li><a href="airlines.html">Airlines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Domestic Routes</h3>
+                    <ul>
+                        <li><a href="flights.html">Karachi - Lahore</a></li>
+                        <li><a href="flights.html">Karachi - Islamabad</a></li>
+                        <li><a href="flights.html">Lahore - Islamabad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="visa.html">Visa Services</a></li>
+                        <li><a href="booking.html">Flight Booking</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JAVED TRAVEL. All Rights Reserved. | Contact: <a href="tel:03181132286" class="whatsapp-float">0318-1132286</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/9203181132286" class="whatsapp-btn" title="Chat on WhatsApp">&#128172;</a>
+    <script src="script.js"></script>
+</body>
+</html>

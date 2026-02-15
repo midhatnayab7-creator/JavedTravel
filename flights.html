@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Flights - JAVED TRAVEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>JAVED TRAVEL - Pakistan's Trusted Domestic Flight Booking</span>
+            <div>
+                <a href="tel:03181132286" class="phone-icon">0318-1132286</a> &nbsp;|&nbsp;
+                <a href="https://wa.me/9203181132286">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">JT</div>
+                    <div class="logo-text">
+                        <h1>JAVED TRAVEL</h1>
+                        <span>Domestic &amp; International Flights</span>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="flights.html" class="active">Flights</a>
+                    <a href="timetable.html">Timetable</a>
+                    <a href="airlines.html">Airlines</a>
+                    <a href="booking.html">Book Now</a>
+                    <a href="visa.html">Visa Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h2>Search Domestic Flights</h2>
+            <p>Find and compare flights from all Pakistan domestic airlines</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Flights</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <div class="container" style="margin-top:30px;">
+        <div class="search-box" style="margin-top:0;">
+            <h3>&#9992; Find Your Flight</h3>
+            <div class="search-tabs">
+                <button class="search-tab active">One Way</button>
+                <button class="search-tab">Round Trip</button>
+            </div>
+            <form class="search-form" onsubmit="event.preventDefault(); generateFlightResults();">
+                <div class="form-group">
+                    <label>From</label>
+                    <select class="city-select" id="searchFrom">
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <select class="city-select" id="searchTo">
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>Passengers</label>
+                    <select>
+                        <option>1 Adult</option>
+                        <option>2 Adults</option>
+                        <option>3 Adults</option>
+                        <option>4 Adults</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Search &#9992;</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Date Badge -->
+    <section class="section" style="padding-top:30px;">
+        <div class="container">
+            <div class="date-badge">Today's Schedule: <span class="current-date"></span></div>
+            <p style="color:#64748b;margin-bottom:25px;">Showing available flights across all airlines. Prices and schedules are updated daily.</p>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <select id="flightFilterAirline" onchange="generateFlightResults()">
+                    <option value="all">All Airlines</option>
+                    <option value="PIA">PIA</option>
+                    <option value="Airblue">Airblue</option>
+                    <option value="SereneAir">SereneAir</option>
+                    <option value="AirSial">AirSial</option>
+                    <option value="Fly Jinnah">Fly Jinnah</option>
+                </select>
+                <select id="flightFilterClass">
+                    <option value="economy">Economy Class</option>
+                    <option value="business">Business Class</option>
+                </select>
+                <select id="flightSortBy" onchange="generateFlightResults()">
+                    <option value="price">Sort by: Price (Low to High)</option>
+                    <option value="time">Sort by: Departure Time</option>
+                </select>
+            </div>
+
+            <!-- Flight Results -->
+            <div id="flightResults"></div>
+
+            <!-- More Info -->
+            <div style="text-align:center;margin-top:40px;padding:30px;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <h3 style="margin-bottom:10px;color:#0a1628;">Need Help Booking?</h3>
+                <p style="color:#64748b;margin-bottom:15px;">Our travel experts are available 24/7 to help you find the best flights</p>
+                <a href="tel:03181132286" class="btn btn-accent btn-lg">Call Now: 0318-1132286</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>JAVED TRAVEL</h3>
+                    <p>Your trusted travel partner for domestic airline tickets across Pakistan.</p>
+                    <p style="margin-top:15px;"><strong>Call:</strong> <a href="tel:03181132286" style="color:#f59e0b;">0318-1132286</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="flights.html">Search Flights</a></li>
+                        <li><a href="timetable.html">Flight Timetable</a></li>
+                        <li><a href="airlines.html">Airlines</a></li>
+                        <li><a href="booking.html">Book Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Domestic Routes</h3>
+                    <ul>
+                        <li><a href="flights.html">Karachi - Lahore</a></li>
+                        <li><a href="flights.html">Karachi - Islamabad</a></li>
+                        <li><a href="flights.html">Lahore - Islamabad</a></li>
+                        <li><a href="flights.html">Islamabad - Peshawar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="visa.html">Visa Services</a></li>
+                        <li><a href="booking.html">Flight Booking</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JAVED TRAVEL. All Rights Reserved. | Contact: <a href="tel:03181132286" class="whatsapp-float">0318-1132286</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/9203181132286" class="whatsapp-btn" title="Chat on WhatsApp">&#128172;</a>
+    <script src="script.js"></script>
+</body>
+</html>

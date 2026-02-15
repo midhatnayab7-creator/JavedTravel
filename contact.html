@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - JAVED TRAVEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>JAVED TRAVEL - We're Here to Help</span>
+            <div>
+                <a href="tel:03181132286" class="phone-icon">0318-1132286</a> &nbsp;|&nbsp;
+                <a href="https://wa.me/9203181132286">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">JT</div>
+                    <div class="logo-text">
+                        <h1>JAVED TRAVEL</h1>
+                        <span>Domestic &amp; International Flights</span>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="flights.html">Flights</a>
+                    <a href="timetable.html">Timetable</a>
+                    <a href="airlines.html">Airlines</a>
+                    <a href="booking.html">Book Now</a>
+                    <a href="visa.html">Visa Services</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </div>
+                <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our travel experts for bookings and assistance</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div>
+                    <h3 style="font-size:1.5rem;color:#0a1628;margin-bottom:10px;">Get In Touch</h3>
+                    <p style="color:#64748b;margin-bottom:30px;">We're available 24/7 to assist you with flight bookings, timetable information, and visa services. Don't hesitate to reach out!</p>
+
+                    <div class="contact-info-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon" style="background:rgba(26,115,232,0.1);color:#1a73e8;">&#128222;</div>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p><a href="tel:03181132286" style="font-size:1.1rem;">0318-1132286</a></p>
+                                <p style="font-size:0.8rem;">Available 24/7</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon" style="background:rgba(37,211,102,0.1);color:#25D366;">&#128172;</div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/9203181132286" style="font-size:1.1rem;">+92 318 1132286</a></p>
+                                <p style="font-size:0.8rem;">Quick Response Guaranteed</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon" style="background:rgba(245,158,11,0.1);color:#f59e0b;">&#128231;</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@javedtravel.com">info@javedtravel.com</a></p>
+                                <p style="font-size:0.8rem;">Response within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon" style="background:rgba(139,92,246,0.1);color:#8b5cf6;">&#128205;</div>
+                            <div>
+                                <h4>Office Address</h4>
+                                <p>JAVED TRAVEL</p>
+                                <p style="font-size:0.8rem;">Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon" style="background:rgba(16,185,129,0.1);color:#10b981;">&#128337;</div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Saturday: 9:00 AM - 10:00 PM</p>
+                                <p style="font-size:0.8rem;">Sunday: 10:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <div class="booking-form" style="max-width:none;">
+                        <h3 style="font-size:1.3rem;">Send Us a Message</h3>
+                        <p style="text-align:center;color:#64748b;margin-bottom:25px;font-size:0.9rem;">Fill in the form and we'll get back to you shortly</p>
+
+                        <form id="contactForm">
+                            <div class="form-row single">
+                                <div class="form-group-full">
+                                    <label>Full Name *</label>
+                                    <input type="text" placeholder="Enter your name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group-full">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" placeholder="03XX-XXXXXXX" required>
+                                </div>
+                                <div class="form-group-full">
+                                    <label>Email Address</label>
+                                    <input type="email" placeholder="your@email.com">
+                                </div>
+                            </div>
+
+                            <div class="form-row single">
+                                <div class="form-group-full">
+                                    <label>Subject *</label>
+                                    <select required>
+                                        <option value="">Select Subject</option>
+                                        <option>Flight Booking Inquiry</option>
+                                        <option>Timetable Information</option>
+                                        <option>Visa Services</option>
+                                        <option>Price Inquiry</option>
+                                        <option>Cancellation / Refund</option>
+                                        <option>Complaint</option>
+                                        <option>General Inquiry</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row single">
+                                <div class="form-group-full">
+                                    <label>Message *</label>
+                                    <textarea placeholder="Write your message here..." required style="min-height:150px;"></textarea>
+                                </div>
+                            </div>
+
+                            <div style="text-align:center;margin-top:15px;">
+                                <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Contact CTA -->
+            <div style="margin-top:50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;">
+                <div style="background:linear-gradient(135deg,#1a73e8,#1557b0);border-radius:12px;padding:35px;text-align:center;color:#fff;">
+                    <h3 style="font-size:1.3rem;margin-bottom:10px;">Book Flight by Phone</h3>
+                    <p style="font-size:0.9rem;opacity:0.9;margin-bottom:20px;">Instant booking with our travel experts</p>
+                    <a href="tel:03181132286" style="display:inline-block;background:#fff;color:#1a73e8;padding:12px 30px;border-radius:8px;font-weight:700;font-size:1.1rem;">&#128222; 0318-1132286</a>
+                </div>
+                <div style="background:linear-gradient(135deg,#25D366,#128C7E);border-radius:12px;padding:35px;text-align:center;color:#fff;">
+                    <h3 style="font-size:1.3rem;margin-bottom:10px;">WhatsApp Booking</h3>
+                    <p style="font-size:0.9rem;opacity:0.9;margin-bottom:20px;">Send your travel details on WhatsApp</p>
+                    <a href="https://wa.me/9203181132286" style="display:inline-block;background:#fff;color:#25D366;padding:12px 30px;border-radius:8px;font-weight:700;font-size:1.1rem;">&#128172; Chat Now</a>
+                </div>
+                <div style="background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:12px;padding:35px;text-align:center;color:#fff;">
+                    <h3 style="font-size:1.3rem;margin-bottom:10px;">Visa Assistance</h3>
+                    <p style="font-size:0.9rem;opacity:0.9;margin-bottom:20px;">Free consultation for all visa types</p>
+                    <a href="visa.html" style="display:inline-block;background:#fff;color:#d97706;padding:12px 30px;border-radius:8px;font-weight:700;font-size:1.1rem;">View Services</a>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div style="margin-top:60px;">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Common questions about our services</p>
+                    <div class="line"></div>
+                </div>
+
+                <div style="max-width:800px;margin:0 auto;">
+                    <div style="background:#fff;border-radius:12px;padding:25px;margin-bottom:15px;box-shadow:0 2px 8px rgba(0,0,0,0.05);border-left:4px solid #1a73e8;">
+                        <h4 style="color:#0a1628;margin-bottom:8px;">How do I book a domestic flight?</h4>
+                        <p style="color:#64748b;font-size:0.9rem;">You can book through our website booking form, call us at 0318-1132286, or send your travel details via WhatsApp. We will confirm availability and share the fare details.</p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:25px;margin-bottom:15px;box-shadow:0 2px 8px rgba(0,0,0,0.05);border-left:4px solid #1a73e8;">
+                        <h4 style="color:#0a1628;margin-bottom:8px;">Which airlines do you offer tickets for?</h4>
+                        <p style="color:#64748b;font-size:0.9rem;">We offer tickets for all Pakistan domestic airlines: PIA, Airblue, Serene Air, Air Sial, and Fly Jinnah. We compare prices from all airlines to get you the best deal.</p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:25px;margin-bottom:15px;box-shadow:0 2px 8px rgba(0,0,0,0.05);border-left:4px solid #1a73e8;">
+                        <h4 style="color:#0a1628;margin-bottom:8px;">Are flight timetables updated daily?</h4>
+                        <p style="color:#64748b;font-size:0.9rem;">Yes, our flight timetables are updated daily based on airline schedules, seat availability, and booking status. Visit our Timetable page for the latest schedules.</p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:25px;margin-bottom:15px;box-shadow:0 2px 8px rgba(0,0,0,0.05);border-left:4px solid #1a73e8;">
+                        <h4 style="color:#0a1628;margin-bottom:8px;">What payment methods do you accept?</h4>
+                        <p style="color:#64748b;font-size:0.9rem;">We accept bank transfers (all Pakistani banks), JazzCash, EasyPaisa, cash payment at office, and cheque payment.</p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:25px;margin-bottom:15px;box-shadow:0 2px 8px rgba(0,0,0,0.05);border-left:4px solid #1a73e8;">
+                        <h4 style="color:#0a1628;margin-bottom:8px;">Do you provide visa services?</h4>
+                        <p style="color:#64748b;font-size:0.9rem;">Yes! We offer complete visa processing services for UAE, Saudi Arabia, Turkey, Malaysia, Thailand, UK, USA, Canada, and Schengen countries. Contact us for free consultation.</p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:25px;margin-bottom:15px;box-shadow:0 2px 8px rgba(0,0,0,0.05);border-left:4px solid #1a73e8;">
+                        <h4 style="color:#0a1628;margin-bottom:8px;">Can I cancel or change my booking?</h4>
+                        <p style="color:#64748b;font-size:0.9rem;">Cancellation and change policies depend on the airline and fare type. Please contact us at 0318-1132286 for cancellation or changes to your booking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>JAVED TRAVEL</h3>
+                    <p>Your trusted travel partner for domestic airline tickets and visa services across Pakistan.</p>
+                    <p style="margin-top:15px;"><strong>Call:</strong> <a href="tel:03181132286" style="color:#f59e0b;">0318-1132286</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="flights.html">Search Flights</a></li>
+                        <li><a href="timetable.html">Flight Timetable</a></li>
+                        <li><a href="airlines.html">Airlines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="booking.html">Flight Booking</a></li>
+                        <li><a href="visa.html">Visa Services</a></li>
+                        <li><a href="timetable.html">Flight Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><a href="tel:03181132286">0318-1132286</a></li>
+                        <li><a href="https://wa.me/9203181132286">WhatsApp</a></li>
+                        <li><a href="mailto:info@javedtravel.com">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JAVED TRAVEL. All Rights Reserved. | Contact: <a href="tel:03181132286" class="whatsapp-float">0318-1132286</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/9203181132286" class="whatsapp-btn" title="Chat on WhatsApp">&#128172;</a>
+    <script src="script.js"></script>
+</body>
+</html>
