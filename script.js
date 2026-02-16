@@ -1,84 +1,5 @@
 // ===== JAVED TRAVEL - Main JavaScript =====
 
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
-    }
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-    });
-
-    // Update date display
-    updateCurrentDate();
-
-    // Initialize timetable if on timetable page
-    if (document.getElementById('timetableBody')) {
-        generateTimetable();
-    }
-
-    // Initialize flight search results
-    if (document.getElementById('flightResults')) {
-        generateFlightResults();
-    }
-
-    // Search tabs functionality
-    document.querySelectorAll('.search-tab').forEach(tab => {
-        tab.addEventListener('click', function() {
-            document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    // Booking form submission
-    const bookingForm = document.getElementById('bookingForm');
-    if (bookingForm) {
-        bookingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your booking request! Our team will contact you shortly at your provided number.\n\nFor immediate assistance, call us at: 0318-1132286');
-        });
-    }
-
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you within 24 hours.\n\nFor urgent queries, call: 0318-1132286');
-        });
-    }
-
-    // Search form
-    const searchForm = document.getElementById('searchForm');
-    if (searchForm) {
-        searchForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            window.location.href = 'flights.html';
-        });
-    }
-});
-
-// Current date updater
-function updateCurrentDate() {
-    const dateElements = document.querySelectorAll('.current-date');
-    const now = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const dateStr = now.toLocaleDateString('en-PK', options);
-    dateElements.forEach(el => {
-        el.textContent = dateStr;
-    });
-}
-
-// Pakistan Domestic Airlines Data
 const airlines = [
     { code: 'PK', name: 'PIA', fullName: 'Pakistan International Airlines', tag: 'tag-pia' },
     { code: 'PA', name: 'Airblue', fullName: 'Airblue', tag: 'tag-airblue' },
@@ -87,7 +8,6 @@ const airlines = [
     { code: '9P', name: 'Fly Jinnah', fullName: 'Fly Jinnah', tag: 'tag-flyjinnah' }
 ];
 
-// Pakistan Domestic Cities
 const cities = [
     'Karachi', 'Lahore', 'Islamabad', 'Peshawar', 'Quetta',
     'Multan', 'Faisalabad', 'Sialkot', 'Rahim Yar Khan',
@@ -95,7 +15,6 @@ const cities = [
     'Skardu', 'Chitral', 'Dera Ismail Khan', 'Nawabshah'
 ];
 
-// Domestic Routes
 const domesticRoutes = [
     { from: 'Karachi', to: 'Lahore', distance: '1210 km', duration: '1h 50m' },
     { from: 'Karachi', to: 'Islamabad', distance: '1400 km', duration: '2h 05m' },
@@ -126,209 +45,126 @@ const domesticRoutes = [
     { from: 'Sialkot', to: 'Karachi', distance: '1350 km', duration: '2h 00m' },
     { from: 'Rahim Yar Khan', to: 'Islamabad', distance: '700 km', duration: '1h 20m' },
     { from: 'Bahawalpur', to: 'Islamabad', distance: '680 km', duration: '1h 15m' },
-    { from: 'Sukkur', to: 'Islamabad', distance: '850 km', duration: '1h 30m' },
+    { from: 'Sukkur', to: 'Islamabad', distance: '850 km', duration: '1h 30m' }
 ];
 
-// Generate random flight number
 function generateFlightNo(airlineCode) {
     return airlineCode + '-' + (Math.floor(Math.random() * 900) + 100);
 }
 
-// Generate random time
 function generateTime(startHour, endHour) {
     const hour = Math.floor(Math.random() * (endHour - startHour)) + startHour;
     const min = Math.random() > 0.5 ? '00' : '30';
     const ampm = hour >= 12 ? 'PM' : 'AM';
     const displayHour = hour > 12 ? hour - 12 : hour;
-    return `${displayHour}:${min} ${ampm}`;
+    return displayHour + ':' + min + ' ' + ampm;
 }
 
-// Generate random price
 function generatePrice(minPrice, maxPrice) {
     return Math.floor(Math.random() * (maxPrice - minPrice) / 100) * 100 + minPrice;
 }
 
-// Get random status
 function getRandomStatus() {
     const statuses = [
-        { text: 'On Time', class: 'status-ontime' },
-        { text: 'On Time', class: 'status-ontime' },
-        { text: 'On Time', class: 'status-ontime' },
-        { text: 'On Time', class: 'status-ontime' },
-        { text: 'Delayed', class: 'status-delayed' },
-        { text: 'Boarding', class: 'status-boarding' },
+        { text: 'On Time', cls: 'status-ontime' },
+        { text: 'On Time', cls: 'status-ontime' },
+        { text: 'On Time', cls: 'status-ontime' },
+        { text: 'On Time', cls: 'status-ontime' },
+        { text: 'Delayed', cls: 'status-delayed' },
+        { text: 'Boarding', cls: 'status-boarding' }
     ];
     return statuses[Math.floor(Math.random() * statuses.length)];
 }
 
-// Generate Timetable
+function updateCurrentDate() {
+    const dateElements = document.querySelectorAll('.current-date');
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dateStr = now.toLocaleDateString('en-PK', options);
+    dateElements.forEach(function(el) { el.textContent = dateStr; });
+}
+
 function generateTimetable(filterAirline, filterFrom, filterTo) {
     const tbody = document.getElementById('timetableBody');
-    if (!tbody) return;
-
+    if (!tbody) { return; }
     tbody.innerHTML = '';
     let flights = [];
-
-    // Generate flights for each route
-    domesticRoutes.forEach(route => {
-        // Each route gets 2-4 flights from different airlines
+    domesticRoutes.forEach(function(route) {
         const numFlights = Math.floor(Math.random() * 3) + 2;
         const usedAirlines = [];
-
         for (let i = 0; i < numFlights; i++) {
             let airline;
-            do {
-                airline = airlines[Math.floor(Math.random() * airlines.length)];
-            } while (usedAirlines.includes(airline.code) && usedAirlines.length < airlines.length);
+            do { airline = airlines[Math.floor(Math.random() * airlines.length)]; }
+            while (usedAirlines.includes(airline.code) && usedAirlines.length < airlines.length);
             usedAirlines.push(airline.code);
-
-            const depHour = Math.floor(Math.random() * 14) + 6; // 6 AM to 8 PM
+            const depHour = Math.floor(Math.random() * 14) + 6;
             const status = getRandomStatus();
-
             flights.push({
-                airline: airline,
-                flightNo: generateFlightNo(airline.code),
-                from: route.from,
-                to: route.to,
+                airline: airline, flightNo: generateFlightNo(airline.code),
+                from: route.from, to: route.to,
                 departure: generateTime(depHour, depHour + 1),
                 arrival: generateTime(depHour + 1, depHour + 3),
-                duration: route.duration,
-                price: generatePrice(8000, 35000),
+                duration: route.duration, price: generatePrice(8000, 35000),
                 status: status,
                 aircraft: ['Boeing 737', 'Airbus A320', 'ATR 72'][Math.floor(Math.random() * 3)]
             });
         }
     });
-
-    // Apply filters
-    if (filterAirline && filterAirline !== 'all') {
-        flights = flights.filter(f => f.airline.name === filterAirline);
-    }
-    if (filterFrom && filterFrom !== 'all') {
-        flights = flights.filter(f => f.from === filterFrom);
-    }
-    if (filterTo && filterTo !== 'all') {
-        flights = flights.filter(f => f.to === filterTo);
-    }
-
-    // Sort by departure time
-    flights.sort((a, b) => a.departure.localeCompare(b.departure));
-
-    // Render flights
-    flights.forEach(flight => {
+    if (filterAirline && filterAirline !== 'all') { flights = flights.filter(function(f) { return f.airline.name === filterAirline; }); }
+    if (filterFrom && filterFrom !== 'all') { flights = flights.filter(function(f) { return f.from === filterFrom; }); }
+    if (filterTo && filterTo !== 'all') { flights = flights.filter(function(f) { return f.to === filterTo; }); }
+    flights.sort(function(a, b) { return a.departure.localeCompare(b.departure); });
+    flights.forEach(function(flight) {
         const row = document.createElement('tr');
-        row.innerHTML = `
-            <td><span class="airline-tag ${flight.airline.tag}">${flight.airline.name}</span></td>
-            <td><strong>${flight.flightNo}</strong></td>
-            <td>${flight.from}</td>
-            <td>${flight.to}</td>
-            <td><strong>${flight.departure}</strong></td>
-            <td>${flight.arrival}</td>
-            <td>${flight.duration}</td>
-            <td>${flight.aircraft}</td>
-            <td><strong style="color:#10b981">PKR ${flight.price.toLocaleString()}</strong></td>
-            <td><span class="status-badge ${flight.status.class}">${flight.status.text}</span></td>
-            <td><a href="booking.html" class="btn btn-primary" style="padding:6px 14px;font-size:0.8rem;">Book</a></td>
-        `;
+        row.innerHTML = '<td><span class="airline-tag ' + flight.airline.tag + '">' + flight.airline.name + '</span></td><td><strong>' + flight.flightNo + '</strong></td><td>' + flight.from + '</td><td>' + flight.to + '</td><td><strong>' + flight.departure + '</strong></td><td>' + flight.arrival + '</td><td>' + flight.duration + '</td><td>' + flight.aircraft + '</td><td><strong style="color:#10b981">PKR ' + flight.price.toLocaleString() + '</strong></td><td><span class="status-badge ' + flight.status.cls + '">' + flight.status.text + '</span></td><td><a href="booking.html" class="btn btn-primary" style="padding:6px 14px;font-size:0.8rem;">Book</a></td>';
         tbody.appendChild(row);
     });
-
-    // Update flight count
     const countEl = document.getElementById('flightCount');
-    if (countEl) {
-        countEl.textContent = flights.length;
-    }
+    if (countEl) { countEl.textContent = flights.length; }
 }
 
-// Generate Flight Search Results
 function generateFlightResults() {
     const container = document.getElementById('flightResults');
-    if (!container) return;
-
+    if (!container) { return; }
     container.innerHTML = '';
-
     const selectedRoutes = domesticRoutes.slice(0, 15);
-
-    selectedRoutes.forEach(route => {
+    selectedRoutes.forEach(function(route) {
         const numFlights = Math.floor(Math.random() * 3) + 2;
         for (let i = 0; i < numFlights; i++) {
             const airline = airlines[Math.floor(Math.random() * airlines.length)];
             const depHour = Math.floor(Math.random() * 14) + 6;
             const price = generatePrice(8000, 35000);
             const status = getRandomStatus();
-
+            const colors = { 'tag-pia': '#006747', 'tag-airblue': '#004B87', 'tag-serene': '#00A651', 'tag-airsial': '#C8102E', 'tag-flyjinnah': '#FF6B00' };
             const card = document.createElement('div');
             card.className = 'flight-result-card';
             card.style.cssText = 'background:#fff;border-radius:12px;padding:25px;margin-bottom:15px;box-shadow:0 2px 8px rgba(0,0,0,0.08);display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;gap:20px;border-left:4px solid;transition:all 0.3s;';
-
-            const colors = { 'tag-pia': '#006747', 'tag-airblue': '#004B87', 'tag-serene': '#00A651', 'tag-airsial': '#C8102E', 'tag-flyjinnah': '#FF6B00' };
             card.style.borderLeftColor = colors[airline.tag] || '#1a73e8';
-
-            card.innerHTML = `
-                <div style="text-align:center;">
-                    <span class="airline-tag ${airline.tag}" style="display:inline-block;margin-bottom:8px;">${airline.name}</span>
-                    <p style="font-size:0.85rem;color:#64748b;">${generateFlightNo(airline.code)}</p>
-                    <p style="font-size:0.75rem;color:#64748b;">${route.duration}</p>
-                </div>
-                <div>
-                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
-                        <div style="text-align:center;">
-                            <h4 style="font-size:1.2rem;">${generateTime(depHour, depHour + 1)}</h4>
-                            <p style="font-size:0.9rem;color:#64748b;">${route.from}</p>
-                        </div>
-                        <div style="flex:1;padding:0 20px;text-align:center;">
-                            <div style="border-top:2px dashed #e2e8f0;position:relative;margin:10px 0;">
-                                <span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#fff;padding:0 8px;font-size:0.8rem;color:#1a73e8;">&#9992; Direct</span>
-                            </div>
-                        </div>
-                        <div style="text-align:center;">
-                            <h4 style="font-size:1.2rem;">${generateTime(depHour + 1, depHour + 3)}</h4>
-                            <p style="font-size:0.9rem;color:#64748b;">${route.to}</p>
-                        </div>
-                    </div>
-                    <div style="display:flex;gap:10px;flex-wrap:wrap;">
-                        <span class="status-badge ${status.class}">${status.text}</span>
-                        <span style="font-size:0.8rem;color:#64748b;padding:4px 8px;">Economy Class</span>
-                    </div>
-                </div>
-                <div style="text-align:center;">
-                    <p style="font-size:0.75rem;color:#64748b;">Starting from</p>
-                    <h3 style="font-size:1.4rem;color:#10b981;font-weight:700;">PKR ${price.toLocaleString()}</h3>
-                    <a href="booking.html" class="btn btn-primary" style="margin-top:10px;padding:8px 20px;font-size:0.85rem;width:100%;">Book Now</a>
-                </div>
-            `;
-
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(5px)';
-                this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.12)';
-            });
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0)';
-                this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
-            });
-
+            card.innerHTML = '<div style="text-align:center;"><span class="airline-tag ' + airline.tag + '" style="display:inline-block;margin-bottom:8px;">' + airline.name + '</span><p style="font-size:0.85rem;color:#64748b;">' + generateFlightNo(airline.code) + '</p><p style="font-size:0.75rem;color:#64748b;">' + route.duration + '</p></div><div><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><div style="text-align:center;"><h4 style="font-size:1.2rem;">' + generateTime(depHour, depHour + 1) + '</h4><p style="font-size:0.9rem;color:#64748b;">' + route.from + '</p></div><div style="flex:1;padding:0 20px;text-align:center;"><div style="border-top:2px dashed #e2e8f0;position:relative;margin:10px 0;"><span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#fff;padding:0 8px;font-size:0.8rem;color:#1a73e8;">&#9992; Direct</span></div></div><div style="text-align:center;"><h4 style="font-size:1.2rem;">' + generateTime(depHour + 1, depHour + 3) + '</h4><p style="font-size:0.9rem;color:#64748b;">' + route.to + '</p></div></div><div style="display:flex;gap:10px;flex-wrap:wrap;"><span class="status-badge ' + status.cls + '">' + status.text + '</span><span style="font-size:0.8rem;color:#64748b;padding:4px 8px;">Economy Class</span></div></div><div style="text-align:center;"><p style="font-size:0.75rem;color:#64748b;">Starting from</p><h3 style="font-size:1.4rem;color:#10b981;font-weight:700;">PKR ' + price.toLocaleString() + '</h3><a href="booking.html" class="btn btn-primary" style="margin-top:10px;padding:8px 20px;font-size:0.85rem;width:100%;">Book Now</a></div>';
+            card.addEventListener('mouseenter', function() { this.style.transform = 'translateX(5px)'; this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.12)'; });
+            card.addEventListener('mouseleave', function() { this.style.transform = 'translateX(0)'; this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)'; });
             container.appendChild(card);
         }
     });
 }
 
-// Filter timetable
 function filterTimetable() {
-    const airline = document.getElementById('filterAirline')?.value || 'all';
-    const from = document.getElementById('filterFrom')?.value || 'all';
-    const to = document.getElementById('filterTo')?.value || 'all';
+    const airlineEl = document.getElementById('filterAirline');
+    const fromEl = document.getElementById('filterFrom');
+    const toEl = document.getElementById('filterTo');
+    const airline = airlineEl ? airlineEl.value : 'all';
+    const from = fromEl ? fromEl.value : 'all';
+    const to = toEl ? toEl.value : 'all';
     generateTimetable(airline, from, to);
 }
 
-// Populate city selects
 function populateCitySelects() {
     const selects = document.querySelectorAll('.city-select');
-    selects.forEach(select => {
+    selects.forEach(function(select) {
         const defaultOption = select.querySelector('option');
         select.innerHTML = '';
-        if (defaultOption) select.appendChild(defaultOption);
-
-        cities.forEach(city => {
+        if (defaultOption) { select.appendChild(defaultOption); }
+        cities.forEach(function(city) {
             const option = document.createElement('option');
             option.value = city;
             option.textContent = city;
@@ -337,5 +173,25 @@ function populateCitySelects() {
     });
 }
 
-// Call on page load
-document.addEventListener('DOMContentLoaded', populateCitySelects);
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger) { hamburger.addEventListener('click', function() { navLinks.classList.toggle('active'); }); }
+    document.querySelectorAll('.nav-links a').forEach(function(link) { link.addEventListener('click', function() { navLinks.classList.remove('active'); }); });
+    updateCurrentDate();
+    if (document.getElementById('timetableBody')) { generateTimetable(); }
+    if (document.getElementById('flightResults')) { generateFlightResults(); }
+    document.querySelectorAll('.search-tab').forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.search-tab').forEach(function(t) { t.classList.remove('active'); });
+            this.classList.add('active');
+        });
+    });
+    const bookingForm = document.getElementById('bookingForm');
+    if (bookingForm) { bookingForm.addEventListener('submit', function(e) { e.preventDefault(); alert('Thank you for your booking request! Our team will contact you shortly.\n\nCall: 0318-1132286'); }); }
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) { contactForm.addEventListener('submit', function(e) { e.preventDefault(); alert('Thank you for your message! We will get back to you within 24 hours.\n\nCall: 0318-1132286'); }); }
+    const searchForm = document.getElementById('searchForm');
+    if (searchForm) { searchForm.addEventListener('submit', function(e) { e.preventDefault(); window.location.href = 'flights.html'; }); }
+    populateCitySelects();
+});
