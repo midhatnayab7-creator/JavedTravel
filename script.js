@@ -148,7 +148,7 @@ function generateFlightResults() {
     });
 }
 
-function filterTimetable() {
+function filterTimetable() { // eslint-disable-line no-unused-vars
     const airlineEl = document.getElementById('filterAirline');
     const fromEl = document.getElementById('filterFrom');
     const toEl = document.getElementById('filterTo');
