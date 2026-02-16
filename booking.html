@@ -83,45 +83,45 @@
                             <!-- Trip Type -->
                             <div style="display:flex;gap:15px;margin-bottom:25px;justify-content:center;">
                                 <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:10px 20px;border:2px solid #e2e8f0;border-radius:8px;">
-                                    <input type="radio" name="tripType" value="oneway" checked> One Way
+                                    <input type="radio" name="tripType" value="One Way" id="tripOneWay" checked> One Way
                                 </label>
                                 <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:10px 20px;border:2px solid #e2e8f0;border-radius:8px;">
-                                    <input type="radio" name="tripType" value="roundtrip"> Round Trip
+                                    <input type="radio" name="tripType" value="Round Trip" id="tripRound"> Round Trip
                                 </label>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group-full">
                                     <label>Full Name (as per CNIC/Passport) *</label>
-                                    <input type="text" placeholder="Enter your full name" required>
+                                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
                                 </div>
                                 <div class="form-group-full">
                                     <label>CNIC Number *</label>
-                                    <input type="text" placeholder="XXXXX-XXXXXXX-X" required>
+                                    <input type="text" id="bookingCNIC" placeholder="XXXXX-XXXXXXX-X" required>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group-full">
                                     <label>Phone Number *</label>
-                                    <input type="tel" placeholder="03XX-XXXXXXX" required>
+                                    <input type="tel" id="bookingPhone" placeholder="03XX-XXXXXXX" required>
                                 </div>
                                 <div class="form-group-full">
                                     <label>Email Address</label>
-                                    <input type="email" placeholder="your@email.com">
+                                    <input type="email" id="bookingEmail" placeholder="your@email.com">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group-full">
                                     <label>From (Departure City) *</label>
-                                    <select class="city-select" required>
+                                    <select id="bookingFrom" class="city-select" required>
                                         <option value="">Select Departure City</option>
                                     </select>
                                 </div>
                                 <div class="form-group-full">
                                     <label>To (Arrival City) *</label>
-                                    <select class="city-select" required>
+                                    <select id="bookingTo" class="city-select" required>
                                         <option value="">Select Arrival City</option>
                                     </select>
                                 </div>
@@ -130,7 +130,7 @@
                             <div class="form-row">
                                 <div class="form-group-full">
                                     <label>Preferred Airline</label>
-                                    <select>
+                                    <select id="bookingAirline">
                                         <option value="">Any Airline</option>
                                         <option>PIA - Pakistan International Airlines</option>
                                         <option>Airblue</option>
@@ -141,7 +141,7 @@
                                 </div>
                                 <div class="form-group-full">
                                     <label>Class</label>
-                                    <select>
+                                    <select id="bookingClass">
                                         <option>Economy Class</option>
                                         <option>Business Class</option>
                                     </select>
@@ -151,18 +151,18 @@
                             <div class="form-row">
                                 <div class="form-group-full">
                                     <label>Departure Date *</label>
-                                    <input type="date" required>
+                                    <input type="date" id="bookingDepDate" required>
                                 </div>
                                 <div class="form-group-full">
                                     <label>Return Date (for Round Trip)</label>
-                                    <input type="date">
+                                    <input type="date" id="bookingRetDate">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group-full">
                                     <label>Number of Passengers *</label>
-                                    <select required>
+                                    <select id="bookingPassengers" required>
                                         <option>1 Passenger</option>
                                         <option>2 Passengers</option>
                                         <option>3 Passengers</option>
@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="form-group-full">
                                     <label>Preferred Time</label>
-                                    <select>
+                                    <select id="bookingTime">
                                         <option>Any Time</option>
                                         <option>Morning (6 AM - 12 PM)</option>
                                         <option>Afternoon (12 PM - 5 PM)</option>
@@ -185,7 +185,7 @@
                             <div class="form-row single">
                                 <div class="form-group-full">
                                     <label>Special Requests / Notes</label>
-                                    <textarea placeholder="Any special requirements, meal preferences, wheelchair assistance, etc."></textarea>
+                                    <textarea id="bookingNotes" placeholder="Any special requirements, meal preferences, wheelchair assistance, etc."></textarea>
                                 </div>
                             </div>
 

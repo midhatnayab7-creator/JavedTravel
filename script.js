@@ -188,9 +188,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     const bookingForm = document.getElementById('bookingForm');
-    if (bookingForm) { bookingForm.addEventListener('submit', function(e) { e.preventDefault(); alert('Thank you for your booking request! Our team will contact you shortly.\n\nCall: 0318-1132286'); }); }
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var tripType = document.querySelector('input[name="tripType"]:checked').value;
+            var name = document.getElementById('bookingName').value;
+            var cnic = document.getElementById('bookingCNIC').value;
+            var phone = document.getElementById('bookingPhone').value;
+            var email = document.getElementById('bookingEmail').value || 'Not provided';
+            var from = document.getElementById('bookingFrom').value;
+            var to = document.getElementById('bookingTo').value;
+            var airline = document.getElementById('bookingAirline').value || 'Any Airline';
+            var flightClass = document.getElementById('bookingClass').value;
+            var depDate = document.getElementById('bookingDepDate').value;
+            var retDate = document.getElementById('bookingRetDate').value || 'N/A';
+            var passengers = document.getElementById('bookingPassengers').value;
+            var time = document.getElementById('bookingTime').value;
+            var notes = document.getElementById('bookingNotes').value || 'None';
+
+            var message = '--- NEW BOOKING REQUEST ---\n\n'
+                + 'Trip Type: ' + tripType + '\n'
+                + 'Full Name: ' + name + '\n'
+                + 'CNIC: ' + cnic + '\n'
+                + 'Phone: ' + phone + '\n'
+                + 'Email: ' + email + '\n\n'
+                + '--- FLIGHT DETAILS ---\n'
+                + 'From: ' + from + '\n'
+                + 'To: ' + to + '\n'
+                + 'Airline: ' + airline + '\n'
+                + 'Class: ' + flightClass + '\n'
+                + 'Departure Date: ' + depDate + '\n'
+                + 'Return Date: ' + retDate + '\n'
+                + 'Passengers: ' + passengers + '\n'
+                + 'Preferred Time: ' + time + '\n\n'
+                + 'Special Notes: ' + notes + '\n\n'
+                + 'Please confirm this booking. Thank you!';
+
+            var whatsappURL = 'https://wa.me/9203181132286?text=' + encodeURIComponent(message);
+            window.open(whatsappURL, '_blank');
+        });
+    }
     const contactForm = document.getElementById('contactForm');
-    if (contactForm) { contactForm.addEventListener('submit', function(e) { e.preventDefault(); alert('Thank you for your message! We will get back to you within 24 hours.\n\nCall: 0318-1132286'); }); }
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('contactName').value;
+            var phone = document.getElementById('contactPhone').value;
+            var email = document.getElementById('contactEmail').value || 'Not provided';
+            var subject = document.getElementById('contactSubject').value;
+            var msg = document.getElementById('contactMessage').value;
+
+            var message = '--- NEW CONTACT MESSAGE ---\n\n'
+                + 'Name: ' + name + '\n'
+                + 'Phone: ' + phone + '\n'
+                + 'Email: ' + email + '\n'
+                + 'Subject: ' + subject + '\n\n'
+                + 'Message:\n' + msg + '\n\n'
+                + 'Please respond. Thank you!';
+
+            var whatsappURL = 'https://wa.me/9203181132286?text=' + encodeURIComponent(message);
+            window.open(whatsappURL, '_blank');
+        });
+    }
     const searchForm = document.getElementById('searchForm');
     if (searchForm) { searchForm.addEventListener('submit', function(e) { e.preventDefault(); window.location.href = 'flights.html'; }); }
     populateCitySelects();
