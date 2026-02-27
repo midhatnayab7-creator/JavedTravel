@@ -1,419 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JAVED TRAVEL - Book domestic airline tickets in Pakistan. PIA, Airblue, SereneAir, AirSial, Fly Jinnah. Best prices, daily updated schedules. Call 0318-1132286">
-    <meta name="keywords" content="JAVED TRAVEL, Pakistan domestic flights, PIA tickets, Airblue booking, SereneAir, AirSial, Fly Jinnah, Karachi Lahore flights, Islamabad flights, cheap flights Pakistan, airline tickets Pakistan">
-    <meta name="author" content="JAVED TRAVEL">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://midhatnayab7-creator.github.io/JavedTravel/">
-    <meta property="og:title" content="JAVED TRAVEL - Pakistan Domestic Airline Tickets">
-    <meta property="og:description" content="Book domestic flights across Pakistan. PIA, Airblue, SereneAir, AirSial, Fly Jinnah. Best prices guaranteed. Call 0318-1132286">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://midhatnayab7-creator.github.io/JavedTravel/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JAVED TRAVEL - Pakistan Domestic Airline Tickets">
-    <meta name="twitter:description" content="Book domestic flights across Pakistan. Best prices guaranteed.">
-    <title>JAVED TRAVEL - Pakistan Domestic Airline Tickets</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Javed Travel — Your Trusted Journey Partner</title>
+  <meta name="description" content="Javed Travel — Trusted travel agency offering Umrah, Hajj, world tours, holiday packages and flight booking services.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <span>Welcome to JAVED TRAVEL - Your Trusted Travel Partner in Pakistan</span>
-            <div>
-                <a href="tel:03181132286" class="phone-icon">0318-1132286</a> &nbsp;|&nbsp;
-                <a href="https://wa.me/9203181132286">WhatsApp Us</a>
-            </div>
-        </div>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-plane">✈️</div>
+      <h2>Javed Travel</h2>
+      <p>Your Trusted Journey Partner</p>
     </div>
+  </div>
 
-    <!-- Marquee -->
-    <div class="marquee-bar">
-        <div class="marquee-content">
-            &#9992; JAVED TRAVEL - Book Domestic Flights: PIA | Airblue | SereneAir | AirSial | Fly Jinnah &bull;
-            Karachi - Lahore - Islamabad - Peshawar - Quetta - Multan - Faisalabad - Sialkot - Gilgit - Skardu &bull;
-            Best Prices Guaranteed! Call Now: 0318-1132286 &bull;
-            Visa Services Available for All Countries &bull;
-            Daily Updated Flight Schedules &#9992;
+  <!-- ===== WELCOME HOOK ===== -->
+  <div id="jt-welcome-overlay" style="display:none;">
+    <div id="jt-welcome-box">
+      <div class="jt-card-bg"></div>
+      <div class="jt-progress-bar"></div>
+      <button class="jt-close-btn" onclick="jtCloseWelcome()">✕</button>
+      <div class="jt-card-content">
+        <div class="jt-badge">✦ Trusted Since 2005 ✦</div>
+        <div class="jt-plane-wrap">✈️</div>
+        <h1>WELCOME TO<br/><span>JAVED TRAVEL</span></h1>
+        <p class="jt-tagline">Your Trusted Journey Partner</p>
+        <div class="jt-divider">
+          <div class="jt-divider-line"></div>
+          <div class="jt-divider-diamond"></div>
+          <div class="jt-divider-line"></div>
         </div>
+        <div class="jt-features">
+          <div class="jt-feature-pill">🌍 World Tours</div>
+          <div class="jt-feature-pill">🕌 Umrah & Hajj</div>
+          <div class="jt-feature-pill">🏖️ Holiday Packages</div>
+          <div class="jt-feature-pill">✈️ Flight Booking</div>
+        </div>
+        <div class="jt-btn-wrap">
+          <button class="jt-btn-primary" onclick="jtCloseWelcome()">Explore Packages</button>
+          <button class="jt-btn-secondary" onclick="jtCloseWelcome()">Maybe Later</button>
+        </div>
+        <p class="jt-bottom-note">Closing automatically in 8 seconds...</p>
+      </div>
     </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">JT</div>
-                    <div class="logo-text">
-                        <h1>JAVED TRAVEL</h1>
-                        <span>Domestic &amp; International Flights</span>
-                    </div>
-                </a>
-                <div class="nav-links">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="flights.html">Flights</a>
-                    <a href="timetable.html">Timetable</a>
-                    <a href="airlines.html">Airlines</a>
-                    <a href="booking.html">Book Now</a>
-                    <a href="visa.html">Visa Services</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-                    <span></span><span></span><span></span>
-                </div>
-            </nav>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">✈️</span>
+        <div>
+          <span class="logo-name">Javed Travel</span>
+          <span class="logo-tag">Trusted Journey Partner</span>
         </div>
-    </header>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#flights">Flights ✈️</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h2>Book Your <span>Domestic Flights</span><br>Across Pakistan</h2>
-            <p>Find the best deals on PIA, Airblue, SereneAir, AirSial &amp; Fly Jinnah. Instant booking, best prices, and 24/7 customer support.</p>
-            <div style="display:flex;gap:15px;flex-wrap:wrap;">
-                <a href="flights.html" class="btn btn-accent btn-lg">Search Flights &#9992;</a>
-                <a href="booking.html" class="btn btn-outline btn-lg" style="border-color:#fff;color:#fff;">Book Now</a>
-            </div>
-        </div>
-    </section>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="stars" id="stars"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Welcome to</p>
+      <h1 class="hero-title">JAVED TRAVEL</h1>
+      <p class="hero-desc">Your Trusted Journey Partner — Discover the World with Confidence</p>
+      <div class="hero-btns">
+        <a href="#packages" class="btn-gold">Explore Packages</a>
+        <a href="https://wa.me/923001234567" class="btn-outline">💬 WhatsApp Us</a>
+        <a href="#contact" class="btn-outline">View Destinations</a>
+      </div>
+    </div>
+    <div class="hero-info-bar">
+      <div class="info-item">📍 Karachi, Pakistan</div>
+      <div class="info-item">📞 0300-1234567</div>
+      <div class="info-item">🕐 Open Daily: 9AM – 9PM</div>
+    </div>
+  </section>
 
-    <!-- Search Box -->
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
     <div class="container">
-        <div class="search-box">
-            <h3>&#9992; Search Domestic Flights</h3>
-            <div class="search-tabs">
-                <button class="search-tab active">One Way</button>
-                <button class="search-tab">Round Trip</button>
-            </div>
-            <form class="search-form" id="searchForm">
-                <div class="form-group">
-                    <label>From</label>
-                    <select class="city-select" required>
-                        <option value="">Select City</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>To</label>
-                    <select class="city-select" required>
-                        <option value="">Select City</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Departure</label>
-                    <input type="date" required>
-                </div>
-                <div class="form-group">
-                    <label>Passengers</label>
-                    <select>
-                        <option>1 Adult</option>
-                        <option>2 Adults</option>
-                        <option>3 Adults</option>
-                        <option>4 Adults</option>
-                        <option>5 Adults</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg">Search</button>
-            </form>
+      <div class="section-header">
+        <span class="section-label">What We Offer</span>
+        <h2>Our Travel Services</h2>
+        <p>From sacred journeys to exotic destinations — we handle everything for you.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🕌</div>
+          <h3>Umrah & Hajj</h3>
+          <p>Complete Umrah and Hajj packages with visa assistance, hotel bookings, and guided support throughout your spiritual journey.</p>
         </div>
+        <div class="service-card">
+          <div class="service-icon">🌍</div>
+          <h3>World Tours</h3>
+          <p>Explore breathtaking destinations across Europe, Asia, Americas, and beyond with our expertly crafted world tour packages.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏖️</div>
+          <h3>Holiday Packages</h3>
+          <p>Relax and rejuvenate with our curated holiday packages to the world's most stunning beach and mountain resorts.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✈️</div>
+          <h3>Flight Booking</h3>
+          <p>Domestic and international flight bookings at the best rates with all major airlines. Fast, reliable, and hassle-free.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏨</div>
+          <h3>Hotel Reservations</h3>
+          <p>Luxury to budget hotel bookings worldwide. We find the perfect stay that matches your preferences and budget.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>Visa Assistance</h3>
+          <p>Expert visa guidance and documentation assistance for all major countries. We simplify the visa process for you.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Airlines Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Partner Airlines</h2>
-                <p>We offer tickets for all major domestic airlines operating in Pakistan</p>
-                <div class="line"></div>
-            </div>
-            <div class="airlines-grid">
-                <div class="airline-card">
-                    <div class="airline-logo" style="background:linear-gradient(135deg,#006747,#00a86b);">PIA</div>
-                    <h3>Pakistan International Airlines</h3>
-                    <p>National flag carrier of Pakistan</p>
-                    <span class="routes-count">25+ Routes</span>
-                </div>
-                <div class="airline-card">
-                    <div class="airline-logo" style="background:linear-gradient(135deg,#004B87,#0077cc);">AB</div>
-                    <h3>Airblue</h3>
-                    <p>Pakistan's leading private airline</p>
-                    <span class="routes-count">15+ Routes</span>
-                </div>
-                <div class="airline-card">
-                    <div class="airline-logo" style="background:linear-gradient(135deg,#00A651,#00cc66);">SA</div>
-                    <h3>Serene Air</h3>
-                    <p>Premium domestic airline service</p>
-                    <span class="routes-count">12+ Routes</span>
-                </div>
-                <div class="airline-card">
-                    <div class="airline-logo" style="background:linear-gradient(135deg,#C8102E,#e63946);">AS</div>
-                    <h3>Air Sial</h3>
-                    <p>Sialkot's own airline</p>
-                    <span class="routes-count">10+ Routes</span>
-                </div>
-                <div class="airline-card">
-                    <div class="airline-logo" style="background:linear-gradient(135deg,#FF6B00,#ff8c38);">FJ</div>
-                    <h3>Fly Jinnah</h3>
-                    <p>Low-cost carrier of Pakistan</p>
-                    <span class="routes-count">10+ Routes</span>
-                </div>
-            </div>
+  <!-- ===== FLIGHT TIMETABLE ===== -->
+  <section class="flights-section" id="flights">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">📡 Live from Jinnah International Airport</span>
+        <h2>Today's Flight Timetable</h2>
+        <p>Real departure schedule from Karachi (KHI) — Feb 27, 2026 · Source: <a href="https://www.karachiairport.com.pk/flight-info/flight-schedule" target="_blank" class="ft-src-link">karachiairport.com.pk</a></p>
+      </div>
+      <!-- Filter Tabs -->
+      <div class="ft-tabs">
+        <button class="ft-tab active" onclick="ftFilter(this,'all')">🌍 All Flights</button>
+        <button class="ft-tab" onclick="ftFilter(this,'jeddah')">🕌 Jeddah / Saudi</button>
+        <button class="ft-tab" onclick="ftFilter(this,'uae')">🏙️ Dubai / UAE</button>
+        <button class="ft-tab" onclick="ftFilter(this,'europe')">🗼 Europe</button>
+        <button class="ft-tab" onclick="ftFilter(this,'asia')">🌏 SE Asia</button>
+      </div>
+      <!-- Table -->
+      <div class="ft-wrap">
+        <table class="ft-table">
+          <thead>
+            <tr>
+              <th>Airline</th>
+              <th>Destination</th>
+              <th>Flight No.</th>
+              <th>Sched. Time</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="ft-tbody">
+            <!-- ===== JEDDAH / SAUDI ===== -->
+            <tr data-dest="jeddah"><td>AirSial</td><td>🕌 Jeddah</td><td>PF-714</td><td>01:25</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="jeddah"><td>Airblue</td><td>🕌 Jeddah</td><td>PA-170</td><td>01:45</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="jeddah"><td>PIA</td><td>🕌 Jeddah</td><td>PK-731</td><td>03:00</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="jeddah"><td>Saudia</td><td>🕌 Jeddah</td><td>SV-705</td><td>03:05</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="jeddah"><td>Flynas</td><td>🇸🇦 Riyadh</td><td>XY-314</td><td>05:50</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="jeddah"><td>Flynas</td><td>🕌 Jeddah</td><td>XY-638</td><td>13:15</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="jeddah"><td>PIA</td><td>🇸🇦 Dammam</td><td>PK-241</td><td>19:45</td><td><span class="ft-badge boarding">Now Boarding</span></td></tr>
+            <tr data-dest="jeddah"><td>FlyJinnah</td><td>🕌 Jeddah</td><td>9P-600</td><td>20:25</td><td><span class="ft-badge boarding">Now Boarding</span></td></tr>
+            <tr data-dest="jeddah"><td>PIA</td><td>🇸🇦 Riyadh</td><td>PK-729</td><td>22:20</td><td><span class="ft-badge checkin">Now Check In</span></td></tr>
+            <!-- ===== DUBAI / UAE ===== -->
+            <tr data-dest="uae"><td>Air Arabia</td><td>🇦🇪 Sharjah</td><td>G9-549</td><td>02:45</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Emirates</td><td>🏙️ Dubai</td><td>EK-607</td><td>03:00</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Flydubai</td><td>🏙️ Dubai</td><td>FZ-332</td><td>03:30</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Qatar Airways</td><td>🇶🇦 Doha</td><td>QR-605</td><td>04:20</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Etihad</td><td>🇦🇪 Abu Dhabi</td><td>EY-297</td><td>05:10</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Etihad</td><td>🇦🇪 Abu Dhabi</td><td>EY-299</td><td>06:25</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Gulf Air</td><td>🇧🇭 Bahrain</td><td>GF-751</td><td>07:10</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Air Arabia</td><td>🇦🇪 Sharjah</td><td>G9-543</td><td>10:30</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Flydubai</td><td>🏙️ Dubai</td><td>FZ-334</td><td>10:00</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Etihad</td><td>🇦🇪 Abu Dhabi</td><td>EY-293</td><td>11:55</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Emirates</td><td>🏙️ Dubai</td><td>EK-601</td><td>12:00</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Flydubai</td><td>🏙️ Dubai</td><td>FZ-336</td><td>16:40</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Air Arabia</td><td>🇦🇪 Sharjah</td><td>G9-547</td><td>16:45</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Airblue</td><td>🏙️ Dubai</td><td>PA-110</td><td>18:00</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="uae"><td>Etihad</td><td>🇦🇪 Abu Dhabi</td><td>EY-295</td><td>21:25</td><td><span class="ft-badge checkin">Now Check In</span></td></tr>
+            <tr data-dest="uae"><td>Emirates</td><td>🏙️ Dubai</td><td>EK-603</td><td>22:40</td><td><span class="ft-badge checkin">Now Check In</span></td></tr>
+            <tr data-dest="uae"><td>Flydubai</td><td>🏙️ Dubai</td><td>FZ-330</td><td>23:55</td><td><span class="ft-badge expected">Expected</span></td></tr>
+            <!-- ===== EUROPE ===== -->
+            <tr data-dest="europe"><td>Pegasus Airlines</td><td>🗼 Istanbul</td><td>PC-131</td><td>05:10</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <tr data-dest="europe"><td>Turkish Airlines</td><td>🗼 Istanbul</td><td>TK-709</td><td>06:15</td><td><span class="ft-badge departed">Departed</span></td></tr>
+            <!-- ===== SE ASIA ===== -->
+            <tr data-dest="asia"><td>AirAsia X</td><td>🌏 Kuala Lumpur</td><td>D7-109</td><td>22:20</td><td><span class="ft-badge checkin">Now Check In</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PACKAGES ===== -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-label">Travel Deals</span>
+        <h2>Popular Packages</h2>
+        <p>Hand-picked travel packages for every budget and dream destination.</p>
+      </div>
+      <div class="packages-grid">
+        <div class="pkg-card">
+          <div class="pkg-icon">🕌</div>
+          <div class="pkg-badge">Most Popular</div>
+          <h3>Umrah Package</h3>
+          <p class="pkg-duration">📅 14 Days</p>
+          <ul class="pkg-features">
+            <li>✅ Return Flight Tickets</li>
+            <li>✅ 4-Star Hotel (Makkah & Madina)</li>
+            <li>✅ Visa Processing</li>
+            <li>✅ Group Guidance</li>
+            <li>✅ Transport Included</li>
+          </ul>
+          <button class="pkg-btn" onclick="jtOpenManager()">Enquire Now</button>
         </div>
-    </section>
-
-    <!-- Popular Routes -->
-    <section class="section bg-gray">
-        <div class="container">
-            <div class="section-header">
-                <h2>Popular Domestic Routes</h2>
-                <p>Most booked flight routes across Pakistan with best prices</p>
-                <div class="line"></div>
-            </div>
-            <div class="routes-grid">
-                <div class="route-card">
-                    <div class="route-info">
-                        <h4>Karachi to Lahore</h4>
-                        <div class="route-path">KHI <span class="arrow">&#9992; &#10132;</span> LHE</div>
-                        <div class="airlines-available">PIA, Airblue, SereneAir, AirSial, Fly Jinnah</div>
-                    </div>
-                    <div class="route-price">
-                        <div class="price">PKR 12,500</div>
-                        <div class="price-label">Starting from</div>
-                    </div>
-                </div>
-                <div class="route-card">
-                    <div class="route-info">
-                        <h4>Karachi to Islamabad</h4>
-                        <div class="route-path">KHI <span class="arrow">&#9992; &#10132;</span> ISB</div>
-                        <div class="airlines-available">PIA, Airblue, SereneAir, AirSial, Fly Jinnah</div>
-                    </div>
-                    <div class="route-price">
-                        <div class="price">PKR 13,200</div>
-                        <div class="price-label">Starting from</div>
-                    </div>
-                </div>
-                <div class="route-card">
-                    <div class="route-info">
-                        <h4>Lahore to Islamabad</h4>
-                        <div class="route-path">LHE <span class="arrow">&#9992; &#10132;</span> ISB</div>
-                        <div class="airlines-available">PIA, Airblue, SereneAir, AirSial</div>
-                    </div>
-                    <div class="route-price">
-                        <div class="price">PKR 8,500</div>
-                        <div class="price-label">Starting from</div>
-                    </div>
-                </div>
-                <div class="route-card">
-                    <div class="route-info">
-                        <h4>Islamabad to Karachi</h4>
-                        <div class="route-path">ISB <span class="arrow">&#9992; &#10132;</span> KHI</div>
-                        <div class="airlines-available">PIA, Airblue, SereneAir, Fly Jinnah</div>
-                    </div>
-                    <div class="route-price">
-                        <div class="price">PKR 13,500</div>
-                        <div class="price-label">Starting from</div>
-                    </div>
-                </div>
-                <div class="route-card">
-                    <div class="route-info">
-                        <h4>Karachi to Peshawar</h4>
-                        <div class="route-path">KHI <span class="arrow">&#9992; &#10132;</span> PEW</div>
-                        <div class="airlines-available">PIA, Airblue, SereneAir</div>
-                    </div>
-                    <div class="route-price">
-                        <div class="price">PKR 14,800</div>
-                        <div class="price-label">Starting from</div>
-                    </div>
-                </div>
-                <div class="route-card">
-                    <div class="route-info">
-                        <h4>Islamabad to Gilgit</h4>
-                        <div class="route-path">ISB <span class="arrow">&#9992; &#10132;</span> GIL</div>
-                        <div class="airlines-available">PIA</div>
-                    </div>
-                    <div class="route-price">
-                        <div class="price">PKR 9,200</div>
-                        <div class="price-label">Starting from</div>
-                    </div>
-                </div>
-                <div class="route-card">
-                    <div class="route-info">
-                        <h4>Karachi to Quetta</h4>
-                        <div class="route-path">KHI <span class="arrow">&#9992; &#10132;</span> UET</div>
-                        <div class="airlines-available">PIA, Airblue</div>
-                    </div>
-                    <div class="route-price">
-                        <div class="price">PKR 11,000</div>
-                        <div class="price-label">Starting from</div>
-                    </div>
-                </div>
-                <div class="route-card">
-                    <div class="route-info">
-                        <h4>Islamabad to Skardu</h4>
-                        <div class="route-path">ISB <span class="arrow">&#9992; &#10132;</span> KDU</div>
-                        <div class="airlines-available">PIA</div>
-                    </div>
-                    <div class="route-price">
-                        <div class="price">PKR 9,800</div>
-                        <div class="price-label">Starting from</div>
-                    </div>
-                </div>
-            </div>
+        <div class="pkg-card featured">
+          <div class="pkg-icon">🌍</div>
+          <div class="pkg-badge">Best Value</div>
+          <h3>Europe Tour</h3>
+          <p class="pkg-duration">📅 10 Days</p>
+          <ul class="pkg-features">
+            <li>✅ Return Flights</li>
+            <li>✅ 5 Countries Covered</li>
+            <li>✅ 4-Star Hotels</li>
+            <li>✅ Guided Tours</li>
+            <li>✅ All Transfers</li>
+          </ul>
+          <button class="pkg-btn" onclick="jtOpenManager()">Enquire Now</button>
         </div>
-    </section>
-
-    <!-- Features -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose JAVED TRAVEL?</h2>
-                <p>We provide the best travel experience with unmatched services</p>
-                <div class="line"></div>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#9992;</div>
-                    <h3>All Airlines Available</h3>
-                    <p>Book tickets for PIA, Airblue, SereneAir, AirSial, and Fly Jinnah all in one place.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128176;</div>
-                    <h3>Best Price Guarantee</h3>
-                    <p>We offer the most competitive prices for domestic flights across Pakistan.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128197;</div>
-                    <h3>Daily Updated Schedule</h3>
-                    <p>Flight timetables updated daily based on airline schedules and availability.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128222;</div>
-                    <h3>24/7 Customer Support</h3>
-                    <p>Call us anytime at 0318-1132286 for booking assistance and flight queries.</p>
-                </div>
-            </div>
+        <div class="pkg-card">
+          <div class="pkg-icon">🏖️</div>
+          <div class="pkg-badge">Family Special</div>
+          <h3>Malaysia Holiday</h3>
+          <p class="pkg-duration">📅 7 Days</p>
+          <ul class="pkg-features">
+            <li>✅ Return Flights</li>
+            <li>✅ Resort Stay</li>
+            <li>✅ City Tours</li>
+            <li>✅ Theme Park Visits</li>
+            <li>✅ Meals Included</li>
+          </ul>
+          <button class="pkg-btn" onclick="jtOpenManager()">Enquire Now</button>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Stats Bar -->
-    <section class="stats-bar">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>5+</h3>
-                    <p>Partner Airlines</p>
-                </div>
-                <div class="stat-item">
-                    <h3>18+</h3>
-                    <p>Domestic Cities</p>
-                </div>
-                <div class="stat-item">
-                    <h3>50+</h3>
-                    <p>Daily Flights</p>
-                </div>
-                <div class="stat-item">
-                    <h3>10K+</h3>
-                    <p>Happy Customers</p>
-                </div>
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img">
+          <div class="about-img-box">
+            <div class="about-img-icon">✈️</div>
+            <div class="about-stats">
+              <div class="stat"><strong>5000+</strong><span>Happy Travellers</span></div>
+              <div class="stat"><strong>20+</strong><span>Years Experience</span></div>
+              <div class="stat"><strong>50+</strong><span>Destinations</span></div>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section bg-gray">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our Customers Say</h2>
-                <p>Trusted by thousands of travelers across Pakistan</p>
-                <div class="line"></div>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>Excellent service! Booked my Karachi to Islamabad flight through JAVED TRAVEL and got the best price. Highly recommended!</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">AK</div>
-                        <div>
-                            <h4>Ahmed Khan</h4>
-                            <span>Karachi</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p>Very professional and quick booking process. The daily timetable updates are very helpful for planning my business trips.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">FR</div>
-                        <div>
-                            <h4>Fatima Rizwan</h4>
-                            <span>Lahore</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p>Best travel agency in Pakistan! Their visa services are also excellent. Got my UAE visa through them without any hassle.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MH</div>
-                        <div>
-                            <h4>Muhammad Hassan</h4>
-                            <span>Islamabad</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="about-text">
+          <span class="section-label">About Us</span>
+          <h2>A Legacy of<br/>Trusted Journeys</h2>
+          <p>Javed Travel has been the trusted travel partner for thousands of families across Pakistan since 2005. We specialize in making your travel dreams a reality — from spiritual Umrah journeys to luxury world tours.</p>
+          <p>Our team of experienced travel consultants ensures every detail is handled with care, giving you a seamless and memorable travel experience every time.</p>
+          <div class="about-highlights">
+            <div class="highlight">🏆 IATA Accredited</div>
+            <div class="highlight">🤝 Trusted by 5000+ Clients</div>
+            <div class="highlight">🛡️ 100% Secure Booking</div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>JAVED TRAVEL</h3>
-                    <p>Your trusted travel partner for domestic airline tickets across Pakistan. We offer the best prices for PIA, Airblue, SereneAir, AirSial, and Fly Jinnah flights.</p>
-                    <p style="margin-top:15px;"><strong>Call:</strong> <a href="tel:03181132286" style="color:#f59e0b;">0318-1132286</a></p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="flights.html">Search Flights</a></li>
-                        <li><a href="timetable.html">Flight Timetable</a></li>
-                        <li><a href="airlines.html">Airlines</a></li>
-                        <li><a href="booking.html">Book Tickets</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Domestic Routes</h3>
-                    <ul>
-                        <li><a href="flights.html">Karachi - Lahore</a></li>
-                        <li><a href="flights.html">Karachi - Islamabad</a></li>
-                        <li><a href="flights.html">Lahore - Islamabad</a></li>
-                        <li><a href="flights.html">Islamabad - Peshawar</a></li>
-                        <li><a href="flights.html">Islamabad - Gilgit</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="visa.html">Visa Services</a></li>
-                        <li><a href="booking.html">Flight Booking</a></li>
-                        <li><a href="timetable.html">Flight Status</a></li>
-                        <li><a href="contact.html">Customer Support</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 JAVED TRAVEL. All Rights Reserved. | Contact: <a href="tel:03181132286" class="whatsapp-float">0318-1132286</a></p>
-            </div>
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-label">Happy Clients</span>
+        <h2>What Our Travellers Say</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Javed Travel made our Umrah journey absolutely smooth and spiritual. Everything was perfectly arranged. Highly recommended!"</p>
+          <strong>— Ahmed & Family, Karachi</strong>
         </div>
-    </footer>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"We went on the Europe Tour and it was a dream come true. Professional guides, excellent hotels, and unforgettable memories!"</p>
+          <strong>— Sara Malik, Lahore</strong>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"The Malaysia family package was outstanding. Kids had so much fun and we got the best value for money. Will book again!"</p>
+          <strong>— Raza Family, Islamabad</strong>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/9203181132286" class="whatsapp-btn" title="Chat on WhatsApp">
-        &#128172;
-    </a>
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get In Touch</span>
+        <h2>Ready to Travel?</h2>
+        <p>Contact us today and let us plan your perfect journey.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">📍<div><strong>Location</strong><span>Karachi, Pakistan</span></div></div>
+          <div class="contact-item">📞<div><strong>Phone</strong><span>0300-1234567</span></div></div>
+          <div class="contact-item">💬<div><strong>WhatsApp</strong><a href="https://wa.me/923001234567">Chat with us</a></div></div>
+          <div class="contact-item">🕐<div><strong>Hours</strong><span>Daily 9:00 AM – 9:00 PM</span></div></div>
+        </div>
+        <div class="contact-cta">
+          <h3>Book Your Dream Journey Today</h3>
+          <p>Click below to contact our travel manager directly.</p>
+          <button class="btn-gold" onclick="jtOpenManager()">📞 Contact Manager Now</button>
+          <a href="https://wa.me/923001234567" class="btn-outline-dark">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>✈️ Javed Travel</h3>
+          <p>Your Trusted Journey Partner since 2005. Making travel dreams come true for thousands of families.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Umrah & Hajj</a></li>
+            <li><a href="#services">World Tours</a></li>
+            <li><a href="#services">Holiday Packages</a></li>
+            <li><a href="#services">Flight Booking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>📍 Karachi, Pakistan</li>
+            <li>📞 0300-1234567</li>
+            <li>💬 <a href="https://wa.me/923001234567">WhatsApp Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Javed Travel. All Rights Reserved. | Designed with Excellence</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING BUTTONS ===== -->
+  <div class="jt-float-btns">
+    <button class="jt-manager-btn" onclick="jtOpenManager()">📞 Contact Manager</button>
+    <button class="jt-chat-btn" onclick="jtToggleChat()" title="AI Assistant">💬</button>
+  </div>
+
+  <!-- AI Chat Panel -->
+  <div id="jt-chat-panel">
+    <div class="jt-chat-header">
+      <div class="jt-chat-header-left">
+        <div class="jt-chat-avatar">✈️</div>
+        <div class="jt-chat-header-info">
+          <strong>Javed Travel AI</strong>
+          <span>🟢 Online — here to help</span>
+        </div>
+      </div>
+      <button class="jt-chat-close" onclick="jtToggleChat()">✕</button>
+    </div>
+    <div class="jt-chat-messages" id="jt-chat-messages">
+      <div class="jt-msg bot">Assalam u Alaikum! ✈️ Welcome to <strong>Javed Travel</strong>. How can I help you plan your journey today?</div>
+    </div>
+    <div class="jt-quick-replies" id="jt-quick-replies">
+      <button class="jt-qr-btn" onclick="jtQuickReply('Tour packages & pricing')">💰 Packages</button>
+      <button class="jt-qr-btn" onclick="jtQuickReply('Umrah & Hajj booking')">🕌 Umrah/Hajj</button>
+      <button class="jt-qr-btn" onclick="jtQuickReply('Flight booking info')">✈️ Flights</button>
+      <button class="jt-qr-btn" onclick="jtQuickReply('Talk to Manager')">👤 Manager</button>
+    </div>
+    <div class="jt-chat-input-area">
+      <input class="jt-chat-input" id="jt-chat-input" placeholder="Type your message..." onkeydown="if(event.key==='Enter') jtSendMsg()" />
+      <button class="jt-chat-send" onclick="jtSendMsg()">➤</button>
+    </div>
+  </div>
+
+  <!-- Contact Manager Modal -->
+  <div id="jt-manager-modal">
+    <div class="jt-modal-box">
+      <button class="jt-modal-close" onclick="jtCloseManager()">✕</button>
+      <div class="jt-modal-icon">📞</div>
+      <h3>Contact Our Manager</h3>
+      <p>Leave your number and our Travel Manager will call you shortly.</p>
+      <input class="jt-modal-input" id="jt-phone-input" type="tel" placeholder="e.g. 0300-1234567" maxlength="15" />
+      <button class="jt-modal-submit" onclick="jtSubmitPhone()">Send My Number</button>
+      <div class="jt-modal-success" id="jt-modal-success">✅ Thank you! Our Manager will contact you shortly.</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
