@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Javed Travel — Your Trusted Journey Partner</title>
+  <meta name="description" content="Javed Travel — Trusted travel agency offering Umrah, Hajj, world tours, holiday packages and flight booking services.">
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-plane">✈️</div>
+      <h2>Javed Travel</h2>
+      <p>Your Trusted Journey Partner</p>
+    </div>
+  </div>
+
+  <!-- ===== WELCOME HOOK ===== -->
+  <div id="jt-welcome-overlay" style="display:none;">
+    <div id="jt-welcome-box">
+      <div class="jt-card-bg"></div>
+      <div class="jt-progress-bar"></div>
+      <button class="jt-close-btn" onclick="jtCloseWelcome()">✕</button>
+      <div class="jt-card-content">
+        <div class="jt-badge">✦ Trusted Since 2005 ✦</div>
+        <div class="jt-plane-wrap">✈️</div>
+        <h1>WELCOME TO<br/><span>JAVED TRAVEL</span></h1>
+        <p class="jt-tagline">Your Trusted Journey Partner</p>
+        <div class="jt-divider">
+          <div class="jt-divider-line"></div>
+          <div class="jt-divider-diamond"></div>
+          <div class="jt-divider-line"></div>
+        </div>
+        <div class="jt-features">
+          <div class="jt-feature-pill">🌍 World Tours</div>
+          <div class="jt-feature-pill">🕌 Umrah & Hajj</div>
+          <div class="jt-feature-pill">🏖️ Holiday Packages</div>
+          <div class="jt-feature-pill">✈️ Flight Booking</div>
+        </div>
+        <div class="jt-btn-wrap">
+          <button class="jt-btn-primary" onclick="jtCloseWelcome()">Explore Packages</button>
+          <button class="jt-btn-secondary" onclick="jtCloseWelcome()">Maybe Later</button>
+        </div>
+        <p class="jt-bottom-note">Closing automatically in 8 seconds...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">✈️</span>
+        <div>
+          <span class="logo-name">Javed Travel</span>
+          <span class="logo-tag">Trusted Journey Partner</span>
+        </div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" onclick="jtCloseNav()">Home</a></li>
+        <li><a href="#services" onclick="jtCloseNav()">Services</a></li>
+        <li><a href="#flights" onclick="jtCloseNav()">Flights ✈️</a></li>
+        <li><a href="#book-flight" onclick="jtCloseNav()">Book Flight</a></li>
+        <li><a href="#packages" onclick="jtCloseNav()">Packages</a></li>
+        <li><a href="#visa" onclick="jtCloseNav()">Visa</a></li>
+        <li><a href="#about" onclick="jtCloseNav()">About</a></li>
+        <li><a href="#contact" onclick="jtCloseNav()">Contact</a></li>
+      </ul>
+      <a href="#book-flight" class="nav-cta">Book Now</a>
+      <button class="nav-burger" id="nav-burger" onclick="jtToggleNav()">☰</button>
+    </div>
+  </nav>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="jt-marquee">
+    <div class="jt-marquee-track">
+      ✈️ JAVED TRAVEL — Umrah &amp; Hajj Packages &bull; World Tours &bull; Flight Booking &bull; Hotel Reservations &bull; Visa Services &bull;
+      Karachi — Jeddah — Dubai — Istanbul — Kuala Lumpur — London — New York &bull;
+      Best Prices Guaranteed · Call: 0300-1234567 &bull;
+      Trusted Since 2005 — 5000+ Happy Travellers ✈️ &nbsp;&nbsp;&nbsp;
+      ✈️ JAVED TRAVEL — Umrah &amp; Hajj Packages &bull; World Tours &bull; Flight Booking &bull; Hotel Reservations &bull; Visa Services &bull;
+      Karachi — Jeddah — Dubai — Istanbul — Kuala Lumpur — London — New York &bull;
+      Best Prices Guaranteed · Call: 0300-1234567 &bull;
+      Trusted Since 2005 — 5000+ Happy Travellers ✈️
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="stars" id="stars"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Welcome to</p>
+      <h1 class="hero-title">JAVED TRAVEL</h1>
+      <p class="hero-desc">Your Trusted Journey Partner — Discover the World with Confidence</p>
+      <div class="hero-btns">
+        <a href="#packages" class="btn-gold">Explore Packages</a>
+        <a href="https://wa.me/923001234567" class="btn-outline">💬 WhatsApp Us</a>
+        <a href="#contact" class="btn-outline">View Destinations</a>
+      </div>
+    </div>
+    <div class="hero-info-bar">
+      <div class="info-item">📍 Karachi, Pakistan</div>
+      <div class="info-item">📞 0300-1234567</div>
+      <div class="info-item">🕐 Open Daily: 9AM – 9PM</div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Offer</span>
+        <h2>Our Travel Services</h2>
+        <p>From sacred journeys to exotic destinations — we handle everything for you.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🕌</div>
+          <h3>Umrah & Hajj</h3>
+          <p>Complete Umrah and Hajj packages with visa assistance, hotel bookings, and guided support throughout your spiritual journey.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌍</div>
+          <h3>World Tours</h3>
+          <p>Explore breathtaking destinations across Europe, Asia, Americas, and beyond with our expertly crafted world tour packages.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏖️</div>
+          <h3>Holiday Packages</h3>
+          <p>Relax and rejuvenate with our curated holiday packages to the world's most stunning beach and mountain resorts.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✈️</div>
+          <h3>Flight Booking</h3>
+          <p>Domestic and international flight bookings at the best rates with all major airlines. Fast, reliable, and hassle-free.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏨</div>
+          <h3>Hotel Reservations</h3>
+          <p>Luxury to budget hotel bookings worldwide. We find the perfect stay that matches your preferences and budget.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>Visa Assistance</h3>
+          <p>Expert visa guidance and documentation assistance for all major countries. We simplify the visa process for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ANIMATED STATS ===== -->
+  <section class="jt-stats-bar">
+    <div class="container">
+      <div class="jt-stats-grid">
+        <div class="jt-stat-item">
+          <strong class="jt-counter" data-target="5000">0</strong><span>+</span>
+          <p>Happy Travellers</p>
+        </div>
+        <div class="jt-stat-item">
+          <strong class="jt-counter" data-target="20">0</strong><span>+</span>
+          <p>Years Experience</p>
+        </div>
+        <div class="jt-stat-item">
+          <strong class="jt-counter" data-target="50">0</strong><span>+</span>
+          <p>Destinations</p>
+        </div>
+        <div class="jt-stat-item">
+          <strong class="jt-counter" data-target="5">0</strong><span></span>
+          <p>Partner Airlines</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR ROUTES ===== -->
+  <section class="jt-routes-section" id="routes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">🇵🇰 Domestic Flights</span>
+        <h2>Popular Routes</h2>
+        <p>Most booked domestic routes — all major airlines at best prices guaranteed.</p>
+      </div>
+      <div class="jt-routes-grid">
+        <div class="jt-route-card">
+          <div class="jt-route-left">
+            <h4>Karachi → Lahore</h4>
+            <div class="jt-route-codes">KHI ✈️ LHE</div>
+            <div class="jt-route-airlines">PIA · Airblue · SereneAir · AirSial · Fly Jinnah</div>
+          </div>
+          <div class="jt-route-price"><span>PKR 12,500</span><small>Starting from</small></div>
+        </div>
+        <div class="jt-route-card">
+          <div class="jt-route-left">
+            <h4>Karachi → Islamabad</h4>
+            <div class="jt-route-codes">KHI ✈️ ISB</div>
+            <div class="jt-route-airlines">PIA · Airblue · SereneAir · AirSial · Fly Jinnah</div>
+          </div>
+          <div class="jt-route-price"><span>PKR 13,200</span><small>Starting from</small></div>
+        </div>
+        <div class="jt-route-card">
+          <div class="jt-route-left">
+            <h4>Lahore → Islamabad</h4>
+            <div class="jt-route-codes">LHE ✈️ ISB</div>
+            <div class="jt-route-airlines">PIA · Airblue · SereneAir · AirSial</div>
+          </div>
+          <div class="jt-route-price"><span>PKR 8,500</span><small>Starting from</small></div>
+        </div>
+        <div class="jt-route-card">
+          <div class="jt-route-left">
+            <h4>Karachi → Peshawar</h4>
+            <div class="jt-route-codes">KHI ✈️ PEW</div>
+            <div class="jt-route-airlines">PIA · Airblue · SereneAir</div>
+          </div>
+          <div class="jt-route-price"><span>PKR 14,800</span><small>Starting from</small></div>
+        </div>
+        <div class="jt-route-card">
+          <div class="jt-route-left">
+            <h4>Islamabad → Gilgit</h4>
+            <div class="jt-route-codes">ISB ✈️ GIL</div>
+            <div class="jt-route-airlines">PIA</div>
+          </div>
+          <div class="jt-route-price"><span>PKR 9,200</span><small>Starting from</small></div>
+        </div>
+        <div class="jt-route-card">
+          <div class="jt-route-left">
+            <h4>Islamabad → Skardu</h4>
+            <div class="jt-route-codes">ISB ✈️ KDU</div>
+            <div class="jt-route-airlines">PIA · SereneAir</div>
+          </div>
+          <div class="jt-route-price"><span>PKR 10,500</span><small>Starting from</small></div>
+        </div>
+        <div class="jt-route-card">
+          <div class="jt-route-left">
+            <h4>Karachi → Multan</h4>
+            <div class="jt-route-codes">KHI ✈️ MUX</div>
+            <div class="jt-route-airlines">PIA · Airblue · AirSial</div>
+          </div>
+          <div class="jt-route-price"><span>PKR 11,000</span><small>Starting from</small></div>
+        </div>
+        <div class="jt-route-card">
+          <div class="jt-route-left">
+            <h4>Karachi → Quetta</h4>
+            <div class="jt-route-codes">KHI ✈️ UET</div>
+            <div class="jt-route-airlines">PIA · Airblue</div>
+          </div>
+          <div class="jt-route-price"><span>PKR 10,200</span><small>Starting from</small></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px;">
+        <a href="#book-flight" class="btn-gold">Book Any Route ✈️</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLIGHT TIMETABLE ===== -->
+  <section class="flights-section" id="flights">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">🇵🇰 Domestic Airlines Schedule</span>
+        <h2>Pakistan Flight Timetable</h2>
+        <p>Daily domestic flight schedule — PIA, Airblue, SereneAir, AirSial &amp; Fly Jinnah. Best prices guaranteed.</p>
+      </div>
+      <!-- Filter Tabs -->
+      <div class="ft-tabs">
+        <button class="ft-tab active" onclick="ftFilter(this,'all')">✈️ All Airlines</button>
+        <button class="ft-tab" onclick="ftFilter(this,'pia')">🔵 PIA</button>
+        <button class="ft-tab" onclick="ftFilter(this,'airblue')">🔷 Airblue</button>
+        <button class="ft-tab" onclick="ftFilter(this,'serene')">🟢 SereneAir</button>
+        <button class="ft-tab" onclick="ftFilter(this,'airsial')">🟡 AirSial</button>
+        <button class="ft-tab" onclick="ftFilter(this,'jinnah')">🔴 Fly Jinnah</button>
+      </div>
+      <!-- Table -->
+      <div class="ft-wrap">
+        <table class="ft-table">
+          <thead>
+            <tr>
+              <th>Airline</th>
+              <th>Route</th>
+              <th>Flight No.</th>
+              <th>Departure</th>
+              <th>Arrival</th>
+              <th>Days</th>
+              <th>Fare (PKR)</th>
+            </tr>
+          </thead>
+          <tbody id="ft-tbody">
+            <!-- ===== PIA ===== -->
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Lahore</td><td>PK-301</td><td>6:00 AM</td><td>7:50 AM</td><td>Daily</td><td class="ft-price">Rs 12,500</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Lahore</td><td>PK-303</td><td>10:30 AM</td><td>12:20 PM</td><td>Daily</td><td class="ft-price">Rs 13,200</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Lahore</td><td>PK-305</td><td>3:00 PM</td><td>4:50 PM</td><td>Daily</td><td class="ft-price">Rs 14,000</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Lahore</td><td>PK-309</td><td>7:30 PM</td><td>9:20 PM</td><td>Daily</td><td class="ft-price">Rs 13,500</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Islamabad</td><td>PK-307</td><td>7:00 AM</td><td>9:05 AM</td><td>Daily</td><td class="ft-price">Rs 13,200</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Islamabad</td><td>PK-311</td><td>12:00 PM</td><td>2:05 PM</td><td>Daily</td><td class="ft-price">Rs 14,500</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Islamabad</td><td>PK-315</td><td>5:30 PM</td><td>7:35 PM</td><td>Daily</td><td class="ft-price">Rs 15,000</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Peshawar</td><td>PK-351</td><td>8:00 AM</td><td>10:15 AM</td><td>Daily</td><td class="ft-price">Rs 14,800</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Quetta</td><td>PK-321</td><td>9:00 AM</td><td>10:20 AM</td><td>Daily</td><td class="ft-price">Rs 11,000</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Lahore → Islamabad</td><td>PK-370</td><td>6:30 AM</td><td>7:25 AM</td><td>Daily</td><td class="ft-price">Rs 8,500</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Lahore → Karachi</td><td>PK-302</td><td>8:30 AM</td><td>10:20 AM</td><td>Daily</td><td class="ft-price">Rs 12,500</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Islamabad → Karachi</td><td>PK-308</td><td>10:00 AM</td><td>12:05 PM</td><td>Daily</td><td class="ft-price">Rs 13,200</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Islamabad → Gilgit</td><td>PK-601</td><td>7:00 AM</td><td>8:05 AM</td><td>Mon/Wed/Fri</td><td class="ft-price">Rs 9,200</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Islamabad → Skardu</td><td>PK-451</td><td>7:30 AM</td><td>8:40 AM</td><td>Tue/Thu/Sat</td><td class="ft-price">Rs 9,800</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Sukkur</td><td>PK-535</td><td>11:00 AM</td><td>12:00 PM</td><td>Mon/Wed/Fri</td><td class="ft-price">Rs 8,000</td></tr>
+            <tr data-dest="pia"><td>PIA</td><td>Karachi → Gwadar</td><td>PK-505</td><td>10:00 AM</td><td>11:15 AM</td><td>Wed/Sun</td><td class="ft-price">Rs 10,000</td></tr>
+            <!-- ===== AIRBLUE ===== -->
+            <tr data-dest="airblue"><td>Airblue</td><td>Karachi → Lahore</td><td>PA-201</td><td>7:00 AM</td><td>8:50 AM</td><td>Daily</td><td class="ft-price">Rs 11,800</td></tr>
+            <tr data-dest="airblue"><td>Airblue</td><td>Karachi → Lahore</td><td>PA-205</td><td>1:30 PM</td><td>3:20 PM</td><td>Daily</td><td class="ft-price">Rs 12,500</td></tr>
+            <tr data-dest="airblue"><td>Airblue</td><td>Karachi → Lahore</td><td>PA-209</td><td>6:00 PM</td><td>7:50 PM</td><td>Daily</td><td class="ft-price">Rs 13,000</td></tr>
+            <tr data-dest="airblue"><td>Airblue</td><td>Karachi → Islamabad</td><td>PA-211</td><td>6:30 AM</td><td>8:35 AM</td><td>Daily</td><td class="ft-price">Rs 12,800</td></tr>
+            <tr data-dest="airblue"><td>Airblue</td><td>Karachi → Islamabad</td><td>PA-215</td><td>2:00 PM</td><td>4:05 PM</td><td>Daily</td><td class="ft-price">Rs 14,000</td></tr>
+            <tr data-dest="airblue"><td>Airblue</td><td>Karachi → Islamabad</td><td>PA-219</td><td>8:00 PM</td><td>10:05 PM</td><td>Daily</td><td class="ft-price">Rs 13,500</td></tr>
+            <tr data-dest="airblue"><td>Airblue</td><td>Lahore → Islamabad</td><td>PA-400</td><td>7:30 AM</td><td>8:25 AM</td><td>Daily</td><td class="ft-price">Rs 8,200</td></tr>
+            <tr data-dest="airblue"><td>Airblue</td><td>Lahore → Islamabad</td><td>PA-404</td><td>4:00 PM</td><td>4:55 PM</td><td>Daily</td><td class="ft-price">Rs 8,800</td></tr>
+            <tr data-dest="airblue"><td>Airblue</td><td>Lahore → Karachi</td><td>PA-202</td><td>9:30 AM</td><td>11:20 AM</td><td>Daily</td><td class="ft-price">Rs 11,800</td></tr>
+            <tr data-dest="airblue"><td>Airblue</td><td>Islamabad → Karachi</td><td>PA-212</td><td>9:15 AM</td><td>11:20 AM</td><td>Daily</td><td class="ft-price">Rs 12,800</td></tr>
+            <!-- ===== SERENEAIR ===== -->
+            <tr data-dest="serene"><td>SereneAir</td><td>Karachi → Islamabad</td><td>ER-501</td><td>6:45 AM</td><td>8:50 AM</td><td>Daily</td><td class="ft-price">Rs 12,500</td></tr>
+            <tr data-dest="serene"><td>SereneAir</td><td>Karachi → Islamabad</td><td>ER-505</td><td>2:30 PM</td><td>4:35 PM</td><td>Daily</td><td class="ft-price">Rs 13,800</td></tr>
+            <tr data-dest="serene"><td>SereneAir</td><td>Karachi → Lahore</td><td>ER-521</td><td>8:00 AM</td><td>9:50 AM</td><td>Daily</td><td class="ft-price">Rs 12,000</td></tr>
+            <tr data-dest="serene"><td>SereneAir</td><td>Karachi → Lahore</td><td>ER-525</td><td>4:30 PM</td><td>6:20 PM</td><td>Daily</td><td class="ft-price">Rs 12,800</td></tr>
+            <tr data-dest="serene"><td>SereneAir</td><td>Karachi → Peshawar</td><td>ER-541</td><td>9:00 AM</td><td>11:15 AM</td><td>Mon/Wed/Fri/Sun</td><td class="ft-price">Rs 14,200</td></tr>
+            <tr data-dest="serene"><td>SereneAir</td><td>Karachi → Quetta</td><td>ER-551</td><td>10:30 AM</td><td>11:50 AM</td><td>Daily</td><td class="ft-price">Rs 10,500</td></tr>
+            <tr data-dest="serene"><td>SereneAir</td><td>Islamabad → Karachi</td><td>ER-502</td><td>9:30 AM</td><td>11:35 AM</td><td>Daily</td><td class="ft-price">Rs 12,500</td></tr>
+            <tr data-dest="serene"><td>SereneAir</td><td>Lahore → Karachi</td><td>ER-522</td><td>10:30 AM</td><td>12:20 PM</td><td>Daily</td><td class="ft-price">Rs 12,000</td></tr>
+            <!-- ===== AIRSIAL ===== -->
+            <tr data-dest="airsial"><td>AirSial</td><td>Karachi → Lahore</td><td>PF-121</td><td>7:15 AM</td><td>9:05 AM</td><td>Daily</td><td class="ft-price">Rs 11,500</td></tr>
+            <tr data-dest="airsial"><td>AirSial</td><td>Karachi → Lahore</td><td>PF-125</td><td>3:45 PM</td><td>5:35 PM</td><td>Daily</td><td class="ft-price">Rs 12,200</td></tr>
+            <tr data-dest="airsial"><td>AirSial</td><td>Karachi → Islamabad</td><td>PF-131</td><td>8:30 AM</td><td>10:35 AM</td><td>Daily</td><td class="ft-price">Rs 12,800</td></tr>
+            <tr data-dest="airsial"><td>AirSial</td><td>Karachi → Islamabad</td><td>PF-135</td><td>5:00 PM</td><td>7:05 PM</td><td>Daily</td><td class="ft-price">Rs 13,500</td></tr>
+            <tr data-dest="airsial"><td>AirSial</td><td>Lahore → Karachi</td><td>PF-122</td><td>10:00 AM</td><td>11:50 AM</td><td>Daily</td><td class="ft-price">Rs 11,500</td></tr>
+            <tr data-dest="airsial"><td>AirSial</td><td>Islamabad → Karachi</td><td>PF-132</td><td>11:15 AM</td><td>1:20 PM</td><td>Daily</td><td class="ft-price">Rs 12,800</td></tr>
+            <tr data-dest="airsial"><td>AirSial</td><td>Lahore → Islamabad</td><td>PF-151</td><td>6:45 AM</td><td>7:40 AM</td><td>Daily</td><td class="ft-price">Rs 7,800</td></tr>
+            <tr data-dest="airsial"><td>AirSial</td><td>Karachi → Sialkot</td><td>PF-141</td><td>9:00 AM</td><td>11:00 AM</td><td>Mon/Wed/Fri</td><td class="ft-price">Rs 13,500</td></tr>
+            <!-- ===== FLY JINNAH ===== -->
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Karachi → Lahore</td><td>9P-601</td><td>6:30 AM</td><td>8:20 AM</td><td>Daily</td><td class="ft-price">Rs 10,500</td></tr>
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Karachi → Lahore</td><td>9P-605</td><td>2:00 PM</td><td>3:50 PM</td><td>Daily</td><td class="ft-price">Rs 11,200</td></tr>
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Karachi → Islamabad</td><td>9P-611</td><td>7:00 AM</td><td>9:05 AM</td><td>Daily</td><td class="ft-price">Rs 11,000</td></tr>
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Karachi → Islamabad</td><td>9P-615</td><td>4:00 PM</td><td>6:05 PM</td><td>Daily</td><td class="ft-price">Rs 12,000</td></tr>
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Karachi → Peshawar</td><td>9P-621</td><td>8:30 AM</td><td>10:45 AM</td><td>Daily</td><td class="ft-price">Rs 13,000</td></tr>
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Karachi → Quetta</td><td>9P-631</td><td>10:00 AM</td><td>11:20 AM</td><td>Mon/Wed/Fri/Sun</td><td class="ft-price">Rs 9,800</td></tr>
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Lahore → Karachi</td><td>9P-602</td><td>9:00 AM</td><td>10:50 AM</td><td>Daily</td><td class="ft-price">Rs 10,500</td></tr>
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Islamabad → Karachi</td><td>9P-612</td><td>10:00 AM</td><td>12:05 PM</td><td>Daily</td><td class="ft-price">Rs 11,000</td></tr>
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Lahore → Islamabad</td><td>9P-641</td><td>7:00 AM</td><td>7:55 AM</td><td>Daily</td><td class="ft-price">Rs 7,500</td></tr>
+            <tr data-dest="jinnah"><td>Fly Jinnah</td><td>Islamabad → Lahore</td><td>9P-642</td><td>8:30 AM</td><td>9:25 AM</td><td>Daily</td><td class="ft-price">Rs 7,500</td></tr>
+          </tbody>
+        </table>
+        <p class="ft-note">* Fares are approximate (Economy, one-way). Final price confirmed at booking. Call <strong>0318-1132286</strong> for best rates &amp; availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLIGHT BOOKING ===== -->
+  <section class="book-flight-section" id="book-flight">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">✈️ Book Your Seat</span>
+        <h2>Book a Flight</h2>
+        <p>Fill in your details and our agent will confirm your booking within <strong>30 minutes</strong> — best rates guaranteed.</p>
+      </div>
+
+      <div class="bf-layout">
+
+        <!-- ===== LEFT: BOOKING FORM ===== -->
+        <div class="bf-form-wrap">
+          <div class="bf-card">
+            <h3>✈️ Flight Booking Form</h3>
+            <p class="bf-subtitle">Fill in the details below and our team will confirm your booking</p>
+
+            <!-- Trip Type -->
+            <div class="bf-trip-toggle">
+              <label class="bf-trip-label">
+                <input type="radio" name="tripType" value="One Way" id="btn-oneway" checked onchange="bfSetTrip('oneway')"> ➡️ One Way
+              </label>
+              <label class="bf-trip-label">
+                <input type="radio" name="tripType" value="Round Trip" id="btn-return" onchange="bfSetTrip('return')"> 🔁 Round Trip
+              </label>
+            </div>
+
+            <div class="bf-form-grid">
+              <!-- Full Name -->
+              <div class="bf-field">
+                <label>Full Name (as per CNIC/Passport) *</label>
+                <input type="text" class="bf-input" id="bf-name" placeholder="Enter your full name" />
+              </div>
+              <!-- CNIC -->
+              <div class="bf-field">
+                <label>CNIC Number *</label>
+                <input type="text" class="bf-input" id="bf-cnic" placeholder="XXXXX-XXXXXXX-X" />
+              </div>
+              <!-- Phone -->
+              <div class="bf-field">
+                <label>Phone Number *</label>
+                <input type="tel" class="bf-input" id="bf-phone" placeholder="03XX-XXXXXXX" />
+              </div>
+              <!-- Email -->
+              <div class="bf-field">
+                <label>Email Address</label>
+                <input type="email" class="bf-input" id="bf-email" placeholder="your@email.com" />
+              </div>
+              <!-- From -->
+              <div class="bf-field">
+                <label>From (Departure City) *</label>
+                <select class="bf-input" id="bf-from">
+                  <option value="">Select Departure City</option>
+                  <optgroup label="🏙️ Major Cities">
+                    <option>Karachi (KHI)</option>
+                    <option>Lahore (LHE)</option>
+                    <option>Islamabad (ISB)</option>
+                    <option>Peshawar (PEW)</option>
+                    <option>Quetta (UET)</option>
+                    <option>Multan (MUX)</option>
+                    <option>Faisalabad (LYP)</option>
+                    <option>Sialkot (SKT)</option>
+                  </optgroup>
+                  <optgroup label="✈️ Other Domestic">
+                    <option>Sukkur (SKZ)</option>
+                    <option>Gilgit (GIL)</option>
+                    <option>Skardu (KDU)</option>
+                    <option>Gwadar (GWD)</option>
+                    <option>Turbat (TUK)</option>
+                    <option>Chitral (CJL)</option>
+                  </optgroup>
+                  <optgroup label="🌍 International">
+                    <option>Jeddah (JED)</option>
+                    <option>Riyadh (RUH)</option>
+                    <option>Dubai (DXB)</option>
+                    <option>Abu Dhabi (AUH)</option>
+                    <option>Doha (DOH)</option>
+                    <option>Istanbul (IST)</option>
+                    <option>Kuala Lumpur (KUL)</option>
+                  </optgroup>
+                </select>
+              </div>
+              <!-- To -->
+              <div class="bf-field">
+                <label>To (Arrival City) *</label>
+                <select class="bf-input" id="bf-to">
+                  <option value="">Select Arrival City</option>
+                  <optgroup label="🏙️ Major Cities">
+                    <option>Karachi (KHI)</option>
+                    <option>Lahore (LHE)</option>
+                    <option>Islamabad (ISB)</option>
+                    <option>Peshawar (PEW)</option>
+                    <option>Quetta (UET)</option>
+                    <option>Multan (MUX)</option>
+                    <option>Faisalabad (LYP)</option>
+                    <option>Sialkot (SKT)</option>
+                  </optgroup>
+                  <optgroup label="✈️ Other Domestic">
+                    <option>Sukkur (SKZ)</option>
+                    <option>Gilgit (GIL)</option>
+                    <option>Skardu (KDU)</option>
+                    <option>Gwadar (GWD)</option>
+                    <option>Turbat (TUK)</option>
+                    <option>Chitral (CJL)</option>
+                  </optgroup>
+                  <optgroup label="🌍 International">
+                    <option>Jeddah (JED)</option>
+                    <option>Riyadh (RUH)</option>
+                    <option>Dammam (DMM)</option>
+                    <option>Madinah (MED)</option>
+                    <option>Dubai (DXB)</option>
+                    <option>Abu Dhabi (AUH)</option>
+                    <option>Sharjah (SHJ)</option>
+                    <option>Doha, Qatar (DOH)</option>
+                    <option>Bahrain (BAH)</option>
+                    <option>Muscat, Oman (MCT)</option>
+                    <option>Kuwait (KWI)</option>
+                    <option>Istanbul (IST)</option>
+                    <option>London (LHR)</option>
+                    <option>Paris (CDG)</option>
+                    <option>Frankfurt (FRA)</option>
+                    <option>Amsterdam (AMS)</option>
+                    <option>Kuala Lumpur (KUL)</option>
+                    <option>Bangkok (BKK)</option>
+                    <option>Singapore (SIN)</option>
+                    <option>Toronto (YYZ)</option>
+                    <option>New York (JFK)</option>
+                  </optgroup>
+                </select>
+              </div>
+              <!-- Preferred Airline -->
+              <div class="bf-field">
+                <label>Preferred Airline</label>
+                <select class="bf-input" id="bf-airline">
+                  <option value="">Any Airline</option>
+                  <optgroup label="🇵🇰 Domestic">
+                    <option>PIA - Pakistan International Airlines</option>
+                    <option>Airblue</option>
+                    <option>Serene Air</option>
+                    <option>Air Sial</option>
+                    <option>Fly Jinnah</option>
+                  </optgroup>
+                  <optgroup label="🌍 International">
+                    <option>Emirates</option>
+                    <option>Etihad Airways</option>
+                    <option>Qatar Airways</option>
+                    <option>Turkish Airlines</option>
+                    <option>Saudia</option>
+                    <option>Flydubai</option>
+                    <option>Air Arabia</option>
+                    <option>AirAsia X</option>
+                    <option>Flynas</option>
+                  </optgroup>
+                </select>
+              </div>
+              <!-- Class -->
+              <div class="bf-field">
+                <label>Class</label>
+                <select class="bf-input" id="bf-class">
+                  <option>Economy Class</option>
+                  <option>Business Class</option>
+                </select>
+              </div>
+              <!-- Departure Date -->
+              <div class="bf-field">
+                <label>Departure Date *</label>
+                <input type="date" class="bf-input" id="bf-depart" />
+              </div>
+              <!-- Return Date -->
+              <div class="bf-field" id="bf-return-field" style="display:none;">
+                <label>Return Date</label>
+                <input type="date" class="bf-input" id="bf-return-date" />
+              </div>
+              <!-- Passengers -->
+              <div class="bf-field">
+                <label>Number of Passengers *</label>
+                <select class="bf-input" id="bf-passengers">
+                  <option>1 Passenger</option>
+                  <option>2 Passengers</option>
+                  <option>3 Passengers</option>
+                  <option>4 Passengers</option>
+                  <option>5 Passengers</option>
+                  <option>6+ Passengers</option>
+                </select>
+              </div>
+              <!-- Preferred Time -->
+              <div class="bf-field">
+                <label>Preferred Time</label>
+                <select class="bf-input" id="bf-time">
+                  <option>Any Time</option>
+                  <option>Morning (6 AM – 12 PM)</option>
+                  <option>Afternoon (12 PM – 5 PM)</option>
+                  <option>Evening (5 PM – 10 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Special Requests -->
+            <div class="bf-field bf-full">
+              <label>Special Requests / Notes</label>
+              <textarea class="bf-input bf-textarea" id="bf-notes" placeholder="Meal preferences, wheelchair assistance, any special requirements..."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="bf-submit-row">
+              <button class="bf-submit-btn" onclick="bfSubmit()">Submit Booking Request ✈️</button>
+              <p class="bf-note">Our team will call you within <strong>30 minutes</strong> to confirm your booking and payment details.</p>
+            </div>
+
+            <!-- Success Message -->
+            <div class="bf-success" id="bf-success" style="display:none;">
+              <div class="bf-success-icon">✅</div>
+              <h3>Booking Request Received!</h3>
+              <p>Thank you! Our travel agent will contact you within <strong>30 minutes</strong> to confirm your flight and pricing.</p>
+              <a id="bf-wa-link" href="https://wa.me/9203181132286" target="_blank" class="bf-submit-btn" style="display:inline-block;margin-top:16px;text-decoration:none;">💬 Also WhatsApp Us</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== RIGHT: SIDEBAR ===== -->
+        <div class="bf-sidebar">
+
+          <!-- Contact Card -->
+          <div class="bf-sidebar-card bf-contact-card">
+            <h4>Need Help Booking?</h4>
+            <p>Call us directly for instant booking assistance</p>
+            <a href="tel:03181132286" class="bf-call-btn">📞 0318-1132286</a>
+            <a href="https://wa.me/9203181132286" class="bf-wa-btn">💬 WhatsApp Us</a>
+          </div>
+
+          <!-- How Booking Works -->
+          <div class="bf-sidebar-card">
+            <h4>How Booking Works</h4>
+            <div class="bf-steps">
+              <div class="bf-step">
+                <div class="bf-step-num" style="background:#1a73e8;">1</div>
+                <div class="bf-step-text"><strong>Fill Booking Form</strong><p>Enter your travel details and passenger info</p></div>
+              </div>
+              <div class="bf-step">
+                <div class="bf-step-num" style="background:#f59e0b;">2</div>
+                <div class="bf-step-text"><strong>Confirmation Call</strong><p>Our team calls to confirm availability &amp; fare</p></div>
+              </div>
+              <div class="bf-step">
+                <div class="bf-step-num" style="background:#10b981;">3</div>
+                <div class="bf-step-text"><strong>Payment</strong><p>JazzCash, EasyPaisa, or bank transfer</p></div>
+              </div>
+              <div class="bf-step">
+                <div class="bf-step-num" style="background:#8b5cf6;">4</div>
+                <div class="bf-step-text"><strong>Receive E-Ticket</strong><p>Confirmed ticket via WhatsApp or Email</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Methods -->
+          <div class="bf-sidebar-card">
+            <h4>Accepted Payment Methods</h4>
+            <ul class="bf-payment-list">
+              <li>🏦 Bank Transfer (All Banks)</li>
+              <li>📱 JazzCash</li>
+              <li>📱 EasyPaisa</li>
+              <li>💵 Cash Payment (Office)</li>
+              <li>🧾 Cheque Payment</li>
+            </ul>
+          </div>
+
+          <!-- Important Note -->
+          <div class="bf-sidebar-card bf-important-card">
+            <h4>⚠️ Important</h4>
+            <p>Prices are approximate and subject to change based on availability. Final fare will be confirmed at time of booking. Cancellation and refund policies vary by airline.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PACKAGES ===== -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-label">Travel Deals</span>
+        <h2>Popular Packages</h2>
+        <p>Hand-picked travel packages for every budget and dream destination.</p>
+      </div>
+      <div class="packages-grid">
+        <div class="pkg-card">
+          <div class="pkg-icon">🕌</div>
+          <div class="pkg-badge">Most Popular</div>
+          <h3>Umrah Package</h3>
+          <p class="pkg-duration">📅 14 Days</p>
+          <ul class="pkg-features">
+            <li>✅ Return Flight Tickets</li>
+            <li>✅ 4-Star Hotel (Makkah & Madina)</li>
+            <li>✅ Visa Processing</li>
+            <li>✅ Group Guidance</li>
+            <li>✅ Transport Included</li>
+          </ul>
+          <button class="pkg-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="pkg-card featured">
+          <div class="pkg-icon">🌍</div>
+          <div class="pkg-badge">Best Value</div>
+          <h3>Europe Tour</h3>
+          <p class="pkg-duration">📅 10 Days</p>
+          <ul class="pkg-features">
+            <li>✅ Return Flights</li>
+            <li>✅ 5 Countries Covered</li>
+            <li>✅ 4-Star Hotels</li>
+            <li>✅ Guided Tours</li>
+            <li>✅ All Transfers</li>
+          </ul>
+          <button class="pkg-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="pkg-card">
+          <div class="pkg-icon">🏖️</div>
+          <div class="pkg-badge">Family Special</div>
+          <h3>Malaysia Holiday</h3>
+          <p class="pkg-duration">📅 7 Days</p>
+          <ul class="pkg-features">
+            <li>✅ Return Flights</li>
+            <li>✅ Resort Stay</li>
+            <li>✅ City Tours</li>
+            <li>✅ Theme Park Visits</li>
+            <li>✅ Meals Included</li>
+          </ul>
+          <button class="pkg-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISA SERVICES ===== -->
+  <section class="jt-visa-section" id="visa">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-label">📋 Visa Services</span>
+        <h2>Visa Assistance</h2>
+        <p>Expert visa processing for all major destinations — free consultation included.</p>
+      </div>
+      <div class="jt-visa-grid">
+        <div class="jt-visa-card">
+          <div class="jt-visa-flag">🇦🇪</div>
+          <h4>UAE Visa</h4>
+          <div class="jt-visa-type">Tourist · Visit · Transit</div>
+          <div class="jt-visa-price">PKR 25,000</div>
+          <button class="jt-visa-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="jt-visa-card">
+          <div class="jt-visa-flag">🇸🇦</div>
+          <h4>Saudi Arabia</h4>
+          <div class="jt-visa-type">Tourist · Umrah · Visit</div>
+          <div class="jt-visa-price">PKR 20,000</div>
+          <button class="jt-visa-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="jt-visa-card">
+          <div class="jt-visa-flag">🇹🇷</div>
+          <h4>Turkey Visa</h4>
+          <div class="jt-visa-type">Tourist · Business · Student</div>
+          <div class="jt-visa-price">PKR 15,000</div>
+          <button class="jt-visa-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="jt-visa-card">
+          <div class="jt-visa-flag">🇲🇾</div>
+          <h4>Malaysia Visa</h4>
+          <div class="jt-visa-type">Tourist · Business</div>
+          <div class="jt-visa-price">PKR 12,000</div>
+          <button class="jt-visa-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="jt-visa-card">
+          <div class="jt-visa-flag">🇹🇭</div>
+          <h4>Thailand Visa</h4>
+          <div class="jt-visa-type">Tourist · Transit</div>
+          <div class="jt-visa-price">PKR 18,000</div>
+          <button class="jt-visa-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="jt-visa-card">
+          <div class="jt-visa-flag">🇬🇧</div>
+          <h4>UK Visa</h4>
+          <div class="jt-visa-type">Tourist · Student · Business</div>
+          <div class="jt-visa-price">PKR 35,000</div>
+          <button class="jt-visa-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="jt-visa-card">
+          <div class="jt-visa-flag">🇺🇸</div>
+          <h4>USA Visa</h4>
+          <div class="jt-visa-type">Tourist · Visit · Business</div>
+          <div class="jt-visa-price">PKR 10,000 <small style="font-size:11px;font-weight:400;color:var(--text-muted);">Consultation</small></div>
+          <button class="jt-visa-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="jt-visa-card">
+          <div class="jt-visa-flag">🇨🇦</div>
+          <h4>Canada Visa</h4>
+          <div class="jt-visa-type">Tourist · Student · PR</div>
+          <div class="jt-visa-price">PKR 10,000 <small style="font-size:11px;font-weight:400;color:var(--text-muted);">Consultation</small></div>
+          <button class="jt-visa-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+        <div class="jt-visa-card">
+          <div class="jt-visa-flag">🇪🇺</div>
+          <h4>Schengen Visa</h4>
+          <div class="jt-visa-type">Tourist · Business · Transit</div>
+          <div class="jt-visa-price">PKR 30,000</div>
+          <button class="jt-visa-btn" onclick="jtOpenManager()">Enquire Now</button>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px;">
+        <button class="btn-gold" onclick="jtOpenManager()">📋 Free Visa Consultation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img">
+          <div class="about-img-box">
+            <div class="about-img-icon">✈️</div>
+            <div class="about-stats">
+              <div class="stat"><strong>5000+</strong><span>Happy Travellers</span></div>
+              <div class="stat"><strong>20+</strong><span>Years Experience</span></div>
+              <div class="stat"><strong>50+</strong><span>Destinations</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-label">About Us</span>
+          <h2>A Legacy of<br/>Trusted Journeys</h2>
+          <p>Javed Travel has been the trusted travel partner for thousands of families across Pakistan since 2005. We specialize in making your travel dreams a reality — from spiritual Umrah journeys to luxury world tours.</p>
+          <p>Our team of experienced travel consultants ensures every detail is handled with care, giving you a seamless and memorable travel experience every time.</p>
+          <div class="about-highlights">
+            <div class="highlight">🏆 IATA Accredited</div>
+            <div class="highlight">🤝 Trusted by 5000+ Clients</div>
+            <div class="highlight">🛡️ 100% Secure Booking</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-label">Happy Clients</span>
+        <h2>What Our Travellers Say</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Javed Travel made our Umrah journey absolutely smooth and spiritual. Everything was perfectly arranged. Highly recommended!"</p>
+          <strong>— Ahmed & Family, Karachi</strong>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"We went on the Europe Tour and it was a dream come true. Professional guides, excellent hotels, and unforgettable memories!"</p>
+          <strong>— Sara Malik, Lahore</strong>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"The Malaysia family package was outstanding. Kids had so much fun and we got the best value for money. Will book again!"</p>
+          <strong>— Raza Family, Islamabad</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get In Touch</span>
+        <h2>Ready to Travel?</h2>
+        <p>Send us a message and our travel experts will get back to you shortly.</p>
+      </div>
+
+      <div class="cf-grid">
+        <!-- Contact Form -->
+        <div class="cf-form-card">
+          <h3>Send Us a Message</h3>
+          <p>Fill in the form and we'll get back to you shortly</p>
+          <div id="cf-success" class="cf-success">
+            <div class="cf-success-icon">✅</div>
+            <h3 style="color:var(--gold);font-size:20px;margin-bottom:8px;">Message Sent!</h3>
+            <p style="color:var(--text-muted);font-size:13px;">Thank you! Our team will contact you within 24 hours.</p>
+          </div>
+          <div id="cf-form-body">
+            <div class="cf-row">
+              <div class="cf-field">
+                <label>Full Name *</label>
+                <input type="text" class="cf-input" id="cf-name" placeholder="Your full name">
+              </div>
+              <div class="cf-field">
+                <label>Phone Number *</label>
+                <input type="tel" class="cf-input" id="cf-phone" placeholder="03XX-XXXXXXX">
+              </div>
+            </div>
+            <div class="cf-row">
+              <div class="cf-field">
+                <label>Email Address</label>
+                <input type="email" class="cf-input" id="cf-email" placeholder="your@email.com">
+              </div>
+              <div class="cf-field">
+                <label>Subject *</label>
+                <select class="cf-input" id="cf-subject">
+                  <option value="">Select Subject</option>
+                  <option>Flight Booking Inquiry</option>
+                  <option>Umrah / Hajj Package</option>
+                  <option>World Tour Package</option>
+                  <option>Visa Services</option>
+                  <option>Price Inquiry</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+            </div>
+            <div class="cf-row full">
+              <div class="cf-field">
+                <label>Message *</label>
+                <textarea class="cf-input cf-textarea" id="cf-message" placeholder="Write your message here..."></textarea>
+              </div>
+            </div>
+            <button class="cf-submit-btn" onclick="cfSubmit()">Send Message 💬</button>
+          </div>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="cf-info-col">
+          <div class="cf-info-card">
+            <div class="cf-icon">📍</div>
+            <div><strong>Location</strong><span>Karachi, Pakistan</span></div>
+          </div>
+          <div class="cf-info-card">
+            <div class="cf-icon">📞</div>
+            <div><strong>Phone / WhatsApp</strong><a href="tel:03181132286">0318-1132286</a></div>
+          </div>
+          <div class="cf-info-card">
+            <div class="cf-icon">🕐</div>
+            <div><strong>Working Hours</strong><span>Mon–Sat: 9AM–10PM | Sun: 10AM–6PM</span></div>
+          </div>
+          <div class="cf-cta-btns">
+            <a href="tel:03181132286" class="cf-cta-call">📞 Call 0318-1132286</a>
+            <a href="https://wa.me/9203181132286" class="cf-cta-wa">💬 WhatsApp Us Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="jt-faq">
+        <div class="section-header" style="margin-bottom:32px;">
+          <span class="section-label">Common Questions</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="jt-faq-item">
+          <h4>How do I book a domestic or international flight?</h4>
+          <p>Fill in our Flight Booking Form on this page, call us at 0318-1132286, or send your details via WhatsApp. We confirm availability and share fare details within 30 minutes.</p>
+        </div>
+        <div class="jt-faq-item">
+          <h4>Which airlines do you offer tickets for?</h4>
+          <p>All Pakistan domestic airlines: PIA, Airblue, Serene Air, Air Sial, and Fly Jinnah. Internationally: Emirates, Etihad, Qatar Airways, Turkish Airlines, Saudia, Flydubai, Air Arabia, and more.</p>
+        </div>
+        <div class="jt-faq-item">
+          <h4>What payment methods do you accept?</h4>
+          <p>Bank transfers (all Pakistani banks), JazzCash, EasyPaisa, cash payment at office, and cheque payment.</p>
+        </div>
+        <div class="jt-faq-item">
+          <h4>Do you provide visa services?</h4>
+          <p>Yes! Complete visa processing for UAE, Saudi Arabia, Turkey, Malaysia, Thailand, UK, USA, Canada, and Schengen countries — with free consultation included.</p>
+        </div>
+        <div class="jt-faq-item">
+          <h4>Can I cancel or change my booking?</h4>
+          <p>Cancellation and change policies depend on the airline and fare type. Contact us at 0318-1132286 to discuss your options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>✈️ Javed Travel</h3>
+          <p>Your Trusted Journey Partner since 2005. Making travel dreams come true for thousands of families.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#book-flight">Book Flight</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#visa">Visa Services</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Umrah & Hajj</a></li>
+            <li><a href="#services">World Tours</a></li>
+            <li><a href="#services">Holiday Packages</a></li>
+            <li><a href="#services">Flight Booking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>📍 Karachi, Pakistan</li>
+            <li>📞 0300-1234567</li>
+            <li>💬 <a href="https://wa.me/923001234567">WhatsApp Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Javed Travel. All Rights Reserved. | Designed with Excellence</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING BUTTONS ===== -->
+  <div class="jt-float-btns">
+    <button class="jt-manager-btn" onclick="jtOpenManager()">📞 Contact Manager</button>
+    <button class="jt-chat-btn" onclick="jtToggleChat()" title="AI Assistant">💬</button>
+  </div>
+
+  <!-- AI Chat Panel -->
+  <div id="jt-chat-panel">
+    <div class="jt-chat-header">
+      <div class="jt-chat-header-left">
+        <div class="jt-chat-avatar">✈️</div>
+        <div class="jt-chat-header-info">
+          <strong>Javed Travel AI</strong>
+          <span>🟢 Online — here to help</span>
+        </div>
+      </div>
+      <button class="jt-chat-close" onclick="jtToggleChat()">✕</button>
+    </div>
+    <div class="jt-chat-messages" id="jt-chat-messages">
+      <div class="jt-msg bot">Assalam u Alaikum! ✈️ Welcome to <strong>Javed Travel</strong>. How can I help you plan your journey today?</div>
+    </div>
+    <div class="jt-quick-replies" id="jt-quick-replies">
+      <button class="jt-qr-btn" onclick="jtQuickReply('Tour packages & pricing')">💰 Packages</button>
+      <button class="jt-qr-btn" onclick="jtQuickReply('Umrah & Hajj booking')">🕌 Umrah/Hajj</button>
+      <button class="jt-qr-btn" onclick="jtQuickReply('Flight booking info')">✈️ Flights</button>
+      <button class="jt-qr-btn" onclick="jtQuickReply('Talk to Manager')">👤 Manager</button>
+    </div>
+    <div class="jt-chat-input-area">
+      <input class="jt-chat-input" id="jt-chat-input" placeholder="Type your message..." onkeydown="if(event.key==='Enter') jtSendMsg()" />
+      <button class="jt-chat-send" onclick="jtSendMsg()">➤</button>
+    </div>
+  </div>
+
+  <!-- Contact Manager Modal -->
+  <div id="jt-manager-modal">
+    <div class="jt-modal-box">
+      <button class="jt-modal-close" onclick="jtCloseManager()">✕</button>
+      <div class="jt-modal-icon">📞</div>
+      <h3>Contact Our Manager</h3>
+      <p>Leave your number and our Travel Manager will call you shortly.</p>
+      <input class="jt-modal-input" id="jt-phone-input" type="tel" placeholder="e.g. 0300-1234567" maxlength="15" />
+      <button class="jt-modal-submit" onclick="jtSubmitPhone()">Send My Number</button>
+      <div class="jt-modal-success" id="jt-modal-success">✅ Thank you! Our Manager will contact you shortly.</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
