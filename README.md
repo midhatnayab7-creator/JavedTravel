@@ -4,7 +4,7 @@ AI-powered travel agency website with **Zara**, an intelligent chat assistant th
 
 ## Live Site
 
-Deployed on Vercel: [javed-travel.vercel.app](https://javed-travel.vercel.app)
+https://javedtravel.vercel.app
 
 ## Features
 
