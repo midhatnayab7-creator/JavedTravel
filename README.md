@@ -20,44 +20,10 @@ https://javedtravel.vercel.app
 - **Frontend** — HTML, CSS, JavaScript
 - **AI Backend** — Python Flask + Groq API (Llama 4)
 - **Fonts** — Playfair Display + Poppins (Google Fonts)
-- **Hosting** — Vercel (frontend) / Local or Render (AI backend)
-
-## Run Locally
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/midhatnayab7-creator/JavedTravel.git
-cd JavedTravel
-
-# 2. Install Python dependencies
-pip install -r requirements.txt
-
-# 3. Set your Groq API key
-export GROQ_API_KEY="your-key-here"
-
-# 4. Start the AI backend (port 5000)
-python ai_server.py
-
-# 5. Open index.html in your browser
-```
-
-## Project Structure
-
-```
-javed-travel/
-├── index.html          # Main website
-├── ai_server.py        # Zara AI backend (Flask + Groq)
-├── requirements.txt    # Python dependencies
-├── vercel.json         # Vercel deployment config
-├── css/
-│   └── style.css       # Stylesheet
-├── js/
-│   └── main.js         # Frontend JavaScript
-└── api/
-    ├── chat.py         # Vercel serverless function for Zara
-    └── requirements.txt
-```
+- **Hosting** — Vercel (frontend) / Render (AI backend)
 
 ## Author
 
 **Javed Travel** — Trusted since 2005, based in Karachi, Pakistan
+
+**Developed by:** [Midhat Nayab](https://github.com/midhatnayab7-creator) | [LinkedIn](https://www.linkedin.com/in/midhat-nayab-25a6603a3) | [Email](mailto:midhatnayab7@gmail.com)
